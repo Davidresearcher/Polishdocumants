@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About the Researcher – Polish Heritage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">PH</span>
+        <div class="logo-text">
+          <span class="logo-name">Polish Heritage</span>
+          <span class="logo-tagline">Genealogy & Citizenship Services</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about-me.html" class="active">About Me</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about-page">
+      <div class="container two-column">
+        
+        <div class="bio-photo-wrapper">
+          <img src="your-photo.jpg" alt="Photo of Head Researcher" class="bio-photo" onerror="this.style.display='none'; this.parentNode.style.backgroundColor='#ccc';">
+        </div>
+
+        <div class="bio-content">
+          <h4>Lead Researcher</h4>
+          <h1>[Abraham Neumann]</h1>
+          
+          <p class="lead-text">
+            Specializing in Polish archival research and citizenship law with over [1.5] years of experience.
+          </p>
+          
+          <p>
+            My journey began with a personal passion for genealogy, which quickly grew into a professional pursuit. I realized that for many people living abroad, the Polish legal system and archival network can be a maze of bureaucracy.
+          </p>
+          
+          <p>
+            I founded Polish Heritage to be the bridge between you and your history. My expertise lies not just in finding documents, but in understanding the *stories* behind them and the legal weight they carry for citizenship applications.
+          </p>
+          
+          <ul class="bio-stats">
+            <li><strong>Expertise:</strong> Civil & state Archives, Legal Translation</li>
+            <li><strong>Languages:</strong> English, Yiddish, Hebrew</li>
+            <li><strong>Mission:</strong> To make Polish heritage accessible to everyone.</li>
+          </ul>
+
+          <div style="margin-top: 30px;">
+            <a href="index.html#contact" class="btn primary">Contact Me Directly</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Polish Heritage. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
