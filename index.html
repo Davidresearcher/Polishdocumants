@@ -2,39 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="jnqUmHcDM8s6SzT7HUnA-4GEYJ32BYiCmdrCRcnuipc" />
-  
-  <title>Polish Heritage – Citizenship & Genealogy Services</title>
-  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Polish Heritage helps you obtain official documents for genealogy and citizenship, and guides you through the full Polish citizenship process."
-  />
+  <title>Polish Heritage – Citizenship & Genealogy Services</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* --- RESET & BASICS --- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4; /* Light grey background to make boxes pop */
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: 'Merriweather', serif; color: #2c3e50; margin-bottom: 15px; }
+    p { margin-bottom: 15px; }
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 10px; position: relative; padding-left: 20px; }
+    ul li::before { content: "•"; color: #d12e2e; position: absolute; left: 0; font-weight: bold; }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    /* --- LAYOUT UTILITIES --- */
+    .container {
+      max-width: 800px; /* Narrower width for the "Ladder" feel */
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section { padding: 60px 0; }
+    
+    /* The "Ladder Step" Box Style */
+    .ladder-step {
+      background: white;
+      padding: 30px;
+      margin-bottom: 30px; /* Space between steps */
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow */
+      border-left: 5px solid #d12e2e; /* Polish Red accent on the left */
+    }
+
+    /* --- HEADER --- */
+    .site-header {
+      background: #fff;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .logo { font-weight: 700; font-size: 1.2rem; color: #d12e2e; display: flex; flex-direction: column; }
+    .logo-tagline { font-size: 0.8rem; color: #666; font-weight: 400; }
+    .main-nav { margin-top: 10px; }
+    .main-nav a { margin-left: 20px; font-size: 0.9rem; font-weight: 500; }
+    .main-nav a:hover { color: #d12e2e; }
+    .nav-cta { color: #d12e2e !important; font-weight: 700 !important; }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 { color: white; font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px auto; }
+    .hero-list li::before { color: #fff; }
+    .hero-actions { margin-top: 30px; }
+    .btn { display: inline-block; padding: 12px 30px; border-radius: 5px; font-weight: 600; margin: 5px; }
+    .btn.primary { background: #d12e2e; color: white; }
+    .btn.primary:hover { background: #a81c1c; }
+    .btn.secondary { background: transparent; border: 2px solid white; color: white; }
+    .btn.secondary:hover { background: white; color: #333; }
+
+    /* --- SERVICES (STACKED) --- */
+    .service-card h3 { color: #d12e2e; }
+
+    /* --- PROCESS (NUMBERED) --- */
+    .step-number {
+      background: #d12e2e;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* --- CONTACT FORM --- */
+    .contact-box { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .contact-info { text-align: center; margin-bottom: 40px; }
+    .contact-info a { color: #d12e2e; font-weight: bold; font-size: 1.1rem; }
+
+    /* Mobile Tweaks */
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .main-nav { margin-top: 15px; }
+      .main-nav a { display: block; margin: 10px 0; margin-left: 0; }
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
-        <span class="logo-mark">PH</span>
-        <div class="logo-text">
-          <span class="logo-name">Polish Heritage</span>
-          <span class="logo-tagline">Genealogy & Citizenship Services</span>
-        </div>
+        <span class="logo-name">Polish Heritage</span>
+        <span class="logo-tagline">Genealogy & Citizenship Services</span>
       </div>
       <nav class="main-nav">
-        <a href="about-me.html">About Me</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#process">How It Works</a>
-        <a href="#why">Why Us</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
     </div>
@@ -42,37 +136,29 @@
 
   <main>
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1>Secure your Polish heritage and citizenship.</h1>
-          <p class="hero-subtitle">
-            Navigating Polish archives and bureaucracy can be complex. I provide fast, accurate retrieval of official documents and guide you through the entire process of obtaining Polish citizenship by descent.
-          </p>
-
-          <ul class="hero-list">
-            <li>Certified document retrieval from archives across Poland</li>
-            <li>Birth, Marriage, and Death records for genealogy</li>
-            <li>Step-by-step guidance for Citizenship applications</li>
-          </ul>
-
-          <div class="hero-actions">
-            <a href="#contact" class="btn primary">Get Started</a>
-            <a href="#services" class="btn secondary">View Services</a>
-          </div>
+      <div class="container">
+        <h1>Secure your Polish heritage.</h1>
+        <p class="hero-subtitle">
+          Navigating Polish archives and bureaucracy is complex. I provide fast, accurate retrieval of official documents and guide you through the process of obtaining Polish citizenship by descent.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn primary">Get Started</a>
+          <a href="#services" class="btn secondary">View Services</a>
         </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 style="text-align: center;">About Me</h2>
         
-    <section id="about" class="section about">
-      <div class="container two-column">
-        <div>
-          <h2>Your Bridge to Poland</h2>
-          <p>
-            Polish Heritage is dedicated to reconnecting you with your roots and securing your legal status in Poland. We bridge the gap between international clients and local Polish bureaucracy.
-          </p>
-          <p>
-            Whether you are building a family tree or claiming citizenship by descent, I ensure your case is handled with precision, strictly adhering to Polish legal standards. I combine local knowledge with a clear understanding of what international clients need.
-          </p>
+        <div class="ladder-step">
+          <h3>Your Bridge to Poland</h3>
+          <p>Polish Heritage is dedicated to reconnecting you with your roots and securing your legal status in Poland. We bridge the gap between international clients and local Polish bureaucracy.</p>
+          <p>Whether you are building a family tree or claiming citizenship by descent, I ensure your case is handled with precision, strictly adhering to Polish legal standards.</p>
         </div>
-        <div class="about-highlight">
+
+        <div class="ladder-step">
           <h3>Our Focus</h3>
           <ul>
             <li>Locating hard-to-find records in town or state archives</li>
@@ -84,146 +170,105 @@
       </div>
     </section>
 
-    <section id="services" class="section services">
+    <section id="services" class="section">
       <div class="container">
-        <h2>Our Services</h2>
-        <p class="section-intro">
-          I offer a complete set of services for Polish documentation. You can engage me for a single document search or a full citizenship package.
-        </p>
+        <h2 style="text-align: center;">Our Services</h2>
+        <p style="text-align: center; margin-bottom: 30px;">I offer a complete set of services for Polish documentation.</p>
 
-        <div class="service-grid">
-          <article class="service-card">
-            <h3>Document Retrieval</h3>
-            <p>
-              I locate and obtain official documents from state and church archives across Poland. This includes Birth, Marriage, Death, and residence records required for legal proceedings.
-            </p>
-            <ul>
-              <li>Search in all regional archives</li>
-              <li>Certified copies and official extracts</li>
-              <li>High-quality scans and translations available</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Genealogical Research</h3>
-            <p>
-              Discover your history. I help reconstruct family lines in Poland, identify ancestral hometowns, and organize your family's legacy into a clear, documented format.
-            </p>
-            <ul>
-              <li>Tracing family branches in Polish records</li>
-              <li>Identifying original village locations and surname variations</li>
-              <li>Organizing findings into a clear report</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <h3>Citizenship Assistance</h3>
-            <p>
-              Applying for citizenship by descent requires a specific paper trail. I assist in gathering the necessary evidence and preparing a complete application file.
-            </p>
-            <ul>
-              <li>Identifying required documents for your specific case</li>
-              <li>Coordinating document collection in Poland</li>
-              <li>Reviewing your file for completeness</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="section process">
-      <div class="container">
-        <h2>How It Works</h2>
-        <div class="process-steps">
-          <div class="step">
-            <span class="step-number">1</span>
-            <h3>Contact Me</h3>
-            <p>
-              Send an inquiry using the form below. Briefly explain your goal: genealogy, specific documents, or citizenship confirmation.
-            </p>
-          </div>
-          <div class="step">
-            <span class="step-number">2</span>
-            <h3>Free Initial Review</h3>
-            <p>
-              I will review your information to determine what is realistic, identify which documents we need to target, and provide an estimated timeline.
-            </p>
-          </div>
-          <div class="step">
-            <span class="step-number">3</span>
-            <h3>Search & Retrieval</h3>
-            <p>
-              I contact the relevant archives and offices in Poland to locate and obtain your documents, keeping you updated on the progress.
-            </p>
-          </div>
-          <div class="step">
-            <span class="step-number">4</span>
-            <h3>Delivery</h3>
-            <p>
-              Receive your certified documents or completed research report. If applying for citizenship, I help you finalize your application file.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="why" class="section why">
-      <div class="container two-column">
-        <div>
-          <h2>Why Choose Polish Heritage?</h2>
-          <ul class="why-list">
-            <li>
-              <strong>Proven Track Record</strong> – We have successfully retrieved thousands of documents from different archives across every region of Poland.
-            </li>
-            <li>
-              <strong>Dedicated On-Ground Team</strong> – Our local experts navigate the bureaucracy directly in Poland, ensuring faster results than remote researchers.
-            </li>
-            <li>
-              <strong>Efficiency & Reliability</strong> – Our team is focused on securing the official certified copies you need for legal purposes.
-            </li>
-            <li>
-              <strong>Simplicity</strong> – We handle the complex Polish legal correspondence and keep you updated on every step of the process.
-            </li>
+        <article class="ladder-step service-card">
+          <h3>Document Retrieval</h3>
+          <p>I locate and obtain official documents from state and church archives across Poland. This includes Birth, Marriage, Death, and residence records.</p>
+          <ul>
+            <li>Search in all regional archives</li>
+            <li>Certified copies and official extracts</li>
+            <li>High-quality scans and translations available</li>
           </ul>
-        </div>
+        </article>
+
+        <article class="ladder-step service-card">
+          <h3>Genealogical Research</h3>
+          <p>Discover your history. I help reconstruct family lines in Poland, identify ancestral hometowns, and organize your family's legacy.</p>
+          <ul>
+            <li>Tracing family branches in Polish records</li>
+            <li>Identifying original village locations</li>
+            <li>Organizing findings into a clear report</li>
+          </ul>
+        </article>
+
+        <article class="ladder-step service-card">
+          <h3>Citizenship Assistance</h3>
+          <p>Applying for citizenship by descent requires a specific paper trail. I assist in gathering the necessary evidence.</p>
+          <ul>
+            <li>Identifying required documents for your case</li>
+            <li>Coordinating document collection in Poland</li>
+            <li>Reviewing your file for completeness</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container">
+        <h2 style="text-align: center;">How It Works</h2>
         
-        <div class="testimonial-card">
-          <h3>Your Trusted Partner</h3>
-          <p>
-            With years of experience and thousands of successful cases, we have a lot of experience on how to navigate the Polish system. You can rely on our team to handle your case with speed, integrity, and absolute professionalism.
-          </p>
+        <div class="ladder-step">
+          <span class="step-number">1</span>
+          <h3>Contact Me</h3>
+          <p>Send an inquiry using the form below. Briefly explain your goal: genealogy, specific documents, or citizenship confirmation.</p>
+        </div>
+
+        <div class="ladder-step">
+          <span class="step-number">2</span>
+          <h3>Free Initial Review</h3>
+          <p>I will review your information to determine what is realistic, identify which documents we need to target, and provide an estimated timeline.</p>
+        </div>
+
+        <div class="ladder-step">
+          <span class="step-number">3</span>
+          <h3>Search & Retrieval</h3>
+          <p>I contact the relevant archives and offices in Poland to locate and obtain your documents, keeping you updated on the progress.</p>
+        </div>
+
+        <div class="ladder-step">
+          <span class="step-number">4</span>
+          <h3>Delivery</h3>
+          <p>Receive your certified documents or completed research report. If applying for citizenship, I help you finalize your application file.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container">
+        <h2 style="text-align: center;">Why Choose Us?</h2>
+        <div class="ladder-step">
+           <ul>
+             <li><strong>Proven Track Record:</strong> Thousands of documents retrieved.</li>
+             <li><strong>On-Ground Team:</strong> We are physically in Poland.</li>
+             <li><strong>Efficiency:</strong> Focused on legal requirements.</li>
+             <li><strong>Simplicity:</strong> We handle the Polish bureaucracy.</li>
+           </ul>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="container contact-inner">
-        <div>
-          <h2>Get In Touch</h2>
-          <p>
-            Tell me what you are looking for, and I will reply with the best way to move forward.
-          </p>
-
-          <div class="contact-details">
-            <div class="contact-item">
-              <span class="contact-label">Phone / WhatsApp</span>
-              <a href="tel:+19299967799" class="contact-value">+1 929-996-7799</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Email</span>
-              <a href="mailto:infopolishcitizenship@gmail.com" class="contact-value">infopolishcitizenship@gmail.com</a>
-            </div>
-          </div>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 style="text-align: center;">Get In Touch</h2>
+        
+        <div class="contact-info">
+          <p>Phone / WhatsApp: <a href="tel:+19299967799">+1 929-996-7799</a></p>
+          <p>Email: <a href="mailto:infopolishcitizenship@gmail.com">infopolishcitizenship@gmail.com</a></p>
         </div>
 
         <div class="contact-box">
-          <h3>Send a Message</h3>
-          
           <form action="https://formsubmit.co/infopolishcitizenship@gmail.com" method="POST">
             
             <input type="hidden" name="_subject" value="New Inquiry - Polish Heritage Website">
             <input type="text" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
+
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" required placeholder="Full Name" />
@@ -235,11 +280,21 @@
             </div>
             
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required placeholder="Please describe your situation..."></textarea>
+                <label for="service">What do you need help with?</label>
+                <select id="service" name="service">
+                    <option value="General Question">General Question</option>
+                    <option value="Citizenship">Polish Citizenship</option>
+                    <option value="Genealogy">Genealogy Research</option>
+                    <option value="Document Search">Specific Document Search</option>
+                </select>
             </div>
 
-            <button type="submit" style="background-color: #28a745; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; display: block; margin: 20px auto 0 auto;">
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Please describe your situation..."></textarea>
+            </div>
+
+            <button type="submit" style="background-color: #28a745; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold; display: block; margin: 30px auto 0 auto; width: 100%; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                 Submit Message
             </button>
 
@@ -247,6 +302,7 @@
         </div>
       </div>
     </section>
+
   </main>
 </body>
 </html>
