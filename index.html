@@ -1,302 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Polish Heritage – Fast Document Retrieval & Citizenship</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-
-  <style>
-    /* --- PROFESSIONAL CLEAN STYLE --- */
-    
-    /* General Reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: #333;
-      line-height: 1.8;
-      background-color: #fff;
-    }
-
-    /* Headings */
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 20px;
-    }
-    
-    h1 { font-size: 2.8rem; line-height: 1.2; color: #fff; }
-    h2 { font-size: 2.2rem; border-bottom: 3px solid #d12e2e; display: inline-block; padding-bottom: 10px; margin-bottom: 30px; color: #1a1a1a; }
-    h3 { font-size: 1.4rem; font-weight: 600; margin-top: 15px; color: #d12e2e; }
-
-    /* Links & Buttons */
-    a { text-decoration: none; color: inherit; transition: 0.3s; }
-    
-    /* --- LAYOUT CONTAINERS --- */
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* --- HEADER --- */
-    .site-header {
-      background: #fff;
-      padding: 20px 0;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .logo-name { font-weight: bold; font-size: 1.4rem; color: #d12e2e; text-transform: uppercase; letter-spacing: 1px; }
-    .main-nav a { margin-left: 25px; font-size: 0.95rem; font-weight: 600; color: #555; }
-    .main-nav a:hover { color: #d12e2e; }
-
-    /* --- HERO SECTION --- */
-    .hero {
-      /* To add a background image, replace the background line below with:
-         background: linear-gradient(rgba(26, 32, 44, 0.85), rgba(26, 32, 44, 0.85)), url('YOUR_IMAGE_LINK_HERE') center/cover; */
-      background: #1a202c; 
-      padding: 100px 0;
-      text-align: center;
-      color: #fff;
-    }
-    .hero-subtitle {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 20px auto 40px auto;
-      color: #cbd5e1;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 35px;
-      border-radius: 4px;
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin: 10px;
-    }
-    .btn.primary { background: #d12e2e; color: white; border: 2px solid #d12e2e; }
-    .btn.primary:hover { background: #b02626; border-color: #b02626; }
-    .btn.secondary { border: 2px solid #fff; color: #fff; }
-    .btn.secondary:hover { background: #fff; color: #1a202c; }
-
-    /* --- SECTIONS --- */
-    .section { padding: 80px 0; }
-    .bg-light { background-color: #f8fafc; }
-    .bg-dark { background-color: #1e293b; color: #f8fafc; }
-    .bg-dark h2 { color: #fff; border-bottom-color: #d12e2e; }
-    .bg-dark ul li::before { color: #d12e2e; }
-    .text-center { text-align: center; }
-    
-    ul { list-style: none; padding-left: 0; margin-bottom: 20px; }
-    ul li { position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 1.05rem; }
-    ul li::before { content: "✔"; color: #d12e2e; font-weight: bold; position: absolute; left: 0; }
-
-    /* --- GRID LAYOUT FOR SERVICES --- */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .service-card {
-      background: #fff;
-      border-top: 5px solid #d12e2e;
-      padding: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      border-radius: 0 0 8px 8px;
-    }
-
-    /* --- SOCIAL PROOF QUOTE --- */
-    .quote {
-      font-size: 1.4rem;
-      font-style: italic;
-      color: #555;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* --- HOW IT WORKS --- */
-    .step-box { margin-bottom: 25px; font-size: 1.1rem; }
-    .step-num { 
-      background: #d12e2e; 
-      color: white; 
-      font-weight: bold; 
-      padding: 5px 12px; 
-      border-radius: 50%; 
-      margin-right: 15px;
-      display: inline-block;
-    }
-
-    /* --- CONTACT FORM --- */
-    .contact-container {
-      background: #fff;
-      padding: 50px;
-      border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #333; }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    .form-group input:focus, .form-group textarea:focus {
-      outline: none;
-      border-color: #d12e2e;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .header-inner { flex-direction: column; text-align: center; }
-      .main-nav { margin-top: 15px; }
-      .main-nav a { display: inline-block; margin: 10px 15px; }
-      h1 { font-size: 2.2rem; }
-      .section { padding: 50px 0; }
-      .contact-container { padding: 30px 20px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polish Heritage | Abraham Neumann</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <div class="logo-name">Polish Heritage</div>
-        <span style="font-size: 0.85rem; color: #777;">Document Retrieval & Citizenship</span>
-      </div>
-      <nav class="main-nav">
-        <a href="#services">Services</a>
-        <a href="#why-me">Why Me</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#contact" style="color: #d12e2e;">Get Started</a>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="logo">Polish Heritage</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#citizenship">Polish Citizenship</a></li>
+                <li><a href="#services">Polish Citizenship Services</a></li>
+                <li><a href="#genealogy">Genealogy Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
     <section class="hero">
-      <div class="container">
-        <h1>Fast, Reliable Polish Document Retrieval.</h1>
-        <p class="hero-subtitle">
-          Navigating Polish archives is complicated. I make it easy. I specialize in tracking down hard-to-find historical records, vital documents, and citizenship paperwork—quickly, accurately, and for a reasonable price.
-        </p>
-        <div>
-          <a href="#contact" class="btn primary">Get a Free Evaluation</a>
-          <a href="#services" class="btn secondary">See My Specialties</a>
-        </div>
-      </div>
+        <h1>STANDING NEXT TO YOU ON YOUR POLISH CITIZENSHIP JOURNEY AND HELPING YOU TO DISCOVER YOUR ROOTS</h1>
+        <a href="#services" class="btn">Read More</a>
     </section>
 
-    <section class="section text-center bg-light">
-      <div class="container">
-        <h2>Proven Experience. Real Results.</h2>
-        <p class="quote">
-          "Navigating Polish archives can be complex, but drawing on my experience retrieving thousands of historical records across the country, I can help smooth the process. I am highly familiar with the local systems and contacts needed to locate your documents efficiently."
-        </p>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <div class="text-center">
-          <h2>My Specialties</h2>
-        </div>
-        <div class="grid-3">
-          <div class="service-card">
-            <h3>Archival Document Retrieval</h3>
-            <p>I locate and retrieve old birth, marriage, death, and residence records directly from Polish archives. You get certified copies and official extracts without the headache.</p>
-          </div>
-          <div class="service-card">
-            <h3>Citizenship by Descent</h3>
-            <p>Applying for Polish citizenship requires a watertight paper trail. I find the documents you need, organize your file, and make sure it meets strict Polish legal standards.</p>
-          </div>
-          <div class="service-card">
-            <h3>Genealogical Research</h3>
-            <p>Hit a brick wall in your family tree? I trace family branches through complex Polish regional records to identify your ancestral hometowns and original surname variations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-me" class="section bg-dark">
-      <div class="container">
-        <h2>Why Work With Me?</h2>
-        <ul>
-          <li><strong>Fast Turnaround:</strong> I have an on-the-ground network in Poland. I bypass the usual bureaucratic delays.</li>
-          <li><strong>Highly Reliable:</strong> I have done this thousands of times. If the document exists, I will find it and get it certified.</li>
-          <li><strong>Reasonable Pricing:</strong> Expert archival retrieval shouldn't cost a fortune. You get professional, transparent pricing with no hidden fees.</li>
-          <li><strong>Clear Communication:</strong> I explain every step of the Polish legal process in plain, simple English.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="how-it-works" class="section bg-light">
-      <div class="container">
-        <h2>How to Get Started</h2>
-        <div class="step-box">
-          <p><span class="step-num">1</span> <strong>Tell Me What You Need:</strong> Fill out the form below with your goals (specific documents, genealogy, or citizenship).</p>
-        </div>
-        <div class="step-box">
-          <p><span class="step-num">2</span> <strong>Free Evaluation:</strong> I will review your case, tell you exactly what is realistic to find, and give you a clear price and timeline.</p>
-        </div>
-        <div class="step-box">
-          <p><span class="step-num">3</span> <strong>I Get to Work:</strong> I contact the archives, retrieve your certified documents, and deliver them directly to you.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container contact-container">
-        <h2 style="margin-top: 0; border: none; text-align: center;">Let's Find Your History</h2>
-        <p style="text-align: center; margin-bottom: 30px; color: #555;">Tell me exactly what you are looking for, and I will reply with the best way to move forward.</p>
+    <section id="services" class="services-section">
+        <h2 class="section-title">SERVICES <span>Polish Citizenship – Jewish Genealogy</span></h2>
         
-        <form action="https://formsubmit.co/infopolishcitizenship@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New Inquiry - Polish Heritage Website">
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
-
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required placeholder="Full Name" />
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Genealogy for Ancestry Proof</h3>
+                <p>I am Abraham Neumann, a professional Polish Jewish genealogist with a background in law, residing both in Poland and in Israel. Specializing in Polish Jewish Genealogy, since 2010, I assist clients who may have limited knowledge about their Polish ancestry. I specialize in proving citizenship in challenging cases where others have given up.</p>
+                <a href="#contact" class="btn">Read More</a>
             </div>
 
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" required placeholder="name@example.com" />
-            </div>
-            
-            <div class="form-group">
-              <label for="message">What documents or family information are you looking for?</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Example: I am looking for the birth record of my grandfather..."></textarea>
+            <div class="service-card">
+                <h3>Simplified Naturalization</h3>
+                <p>If you have Polish roots and your ancestors may have renounced or lost their citizenship, Simplified Naturalization is tailored for you. This straightforward process allows you to reacquire Polish citizenship without the need for residency in Poland.</p>
+                <a href="#contact" class="btn">Read More</a>
             </div>
 
-            <button type="submit" class="btn primary" style="width: 100%; font-size: 1.2rem; margin-top: 10px;">
-                Submit Message
-            </button>
-        </form>
-        
-        <div style="text-align: center; margin-top: 30px; font-size: 0.95rem; color: #555;">
-          <strong>Email:</strong> <a href="mailto:infopolishcitizenship@gmail.com" style="color: #d12e2e;">infopolishcitizenship@gmail.com</a><br>
-          <strong>Phone / WhatsApp:</strong> <a href="tel:+19299967799" style="color: #d12e2e;">+1 929-996-7799</a>
+            <div class="service-card">
+                <h3>Citizenship Verification</h3>
+                <p>Are you a Polish citizen by descent? I have over a decade’s worth of experience helping individuals confirm their citizenship status with Polish authorities. Let’s explore your heritage and verify your Polish citizenship together.</p>
+                <a href="#contact" class="btn">Read More</a>
+            </div>
         </div>
-      </div>
     </section>
 
-  </main>
+    <section class="cta-section">
+        <h2>Need Advice?</h2>
+        <p>Do you have Polish ancestry? Are you interested in having a European passport? Do you need help with finding the proof of your Polish ancestry? Would you like to study Polish with me?</p>
+        <a href="#contact" class="btn">Call Me</a>
+    </section>
+
+    <section class="testimonial-section">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonial-box">
+            "Abraham is a brilliant, dedicated genealogist! He did tremendously deep dives into antiquated texts to find out about my ancestry. He has access to resources which I can’t access, and speaks many languages I don’t – both of which make him successful. I highly recommend him!"
+            <div class="testimonial-author">- Diane Jacobs, Attorney</div>
+        </div>
+    </section>
+
+    <section id="about" class="story-section">
+        <h2 class="section-title">My Story</h2>
+        <div class="story-content">
+            <p>I am a Polish Jewish genealogist living in Israel. Since 2010 I have been doing heir and probate research, finding vital records for citizenship purposes and making family trees for individuals with Polish and Polish Jewish ancestry.</p>
+            <p>I am a polyglot speaking several languages which skill helps me to navigate through historical documents and legal texts. In Poland I studied three years at the University of Warsaw's Law Faculty, and I have a BA in English language and Literature and Art History and am currently finishing my MSc in Genealogy at Strathclyde University.</p>
+            <a href="#contact" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-contact">
+            <p>USA: +1-555-000-0000 | ISRAEL: +972-(0)55-000-0000</p>
+            <p>Email: abraham.neumann@polishheritage.com</p>
+            <br>
+            <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
-
-
