@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Citizenship Verification | Polish Heritage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ALL PREMIUM STYLES EMBEDDED DIRECTLY */
+        :root {
+            --primary-navy: #0A192F; 
+            --accent-gold: #D4AF37; 
+            --light-bg: #F4F7F6;
+            --white: #FFFFFF;
+            --text-dark: #2D3748;
+            --text-light: #A0AEC0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--primary-navy);
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; }
+
+        nav ul { list-style: none; display: flex; gap: 35px; }
+        nav ul li a { color: var(--white); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+        nav ul li a:hover { color: var(--accent-gold); }
+
+        /* PAGE HEADER */
+        .page-header {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .page-header h1 { font-size: 42px; margin-bottom: 15px; color: var(--accent-gold); }
+        .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; }
+
+        /* CONTENT SECTION */
+        .content-section { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
+        .content-block {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        .content-block h2 { color: var(--primary-navy); margin-bottom: 25px; font-size: 28px; }
+        .content-block p { margin-bottom: 20px; font-size: 16px; color: #4A5568; }
+        .content-block ul { margin-left: 25px; margin-bottom: 25px; color: #4A5568; }
+        .content-block ul li { margin-bottom: 10px; }
+        .content-block ul li strong { color: var(--primary-navy); }
+        
+        .highlight-box { background-color: #F8FAFC; padding: 25px; border-radius: 8px; border: 1px solid #E2E8F0; margin: 30px 0; border-left: 5px solid var(--primary-navy); }
+
+        /* CONTACT FORM SECTION */
+        .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; }
+        .contact-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 10px; }
+        .contact-section > p { margin-bottom: 40px; font-size: 16px; color: var(--text-light); }
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border-top: 5px solid var(--accent-gold);
+            position: relative;
+        }
+        .contact-form { display: flex; flex-direction: column; gap: 25px; }
+        .input-group { display: flex; flex-direction: column; text-align: left; }
+        .input-group label { font-size: 13px; color: var(--primary-navy); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .input-group input, .input-group textarea {
+            padding: 16px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-size: 15px; outline: none; background-color: #F8FAFC; color: var(--text-dark);
+        }
+        .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-gold); background-color: var(--white); }
+        
+        .btn {
+            display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease;
+        }
+        .btn:hover { background-color: #F3C94F; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
+        .submit-btn { width: 100%; margin-top: 10px; padding: 18px; font-size: 16px; }
+
+        /* SUCCESS POPUP STYLING */
+        #form-status {
+            display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 15px; animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* FOOTER */
+        footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; font-size: 14px; }
+        .footer-nav { margin-bottom: 30px; }
+        .footer-nav a { margin: 0 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .footer-nav a:hover { color: var(--accent-gold); }
+        .footer-contact p { margin: 10px 0; }
+        .footer-contact span { color: var(--accent-gold); font-weight: 600; }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            header { flex-direction: column; padding: 20px; }
+            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .content-block, .contact-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Polish Heritage</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="citizenship.html">Polish Citizenship</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about-me.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>VIP Citizenship Verification</h1>
+        <p>Speed, Precision, and White-Glove Service for Your Application</p>
+    </div>
+
+    <section class="content-section">
+        
+        <div class="content-block">
+            <h2>Speed Through Flawless Precision</h2>
+            <p>Locating your ancestors' documents is only the first half of the battle. The second half is the official legal process known as the <strong>Confirmation of Polish Citizenship</strong>. This application is submitted to the Polish Provincial Governor (Voivodeship) and can be an incredibly rigid, bureaucratic process.</p>
+            <p>In Poland, bureaucracy moves exactly as fast as your paperwork allows it to. If an application is submitted with a missing apostille, an incorrect translation, or a formatting error, the government will issue a request for evidence, effectively freezing your case for 6 to 12 months.</p>
+            <p>My VIP Verification service is designed to eliminate these delays entirely. I ensure that your dossier is 100% legally flawless before it ever reaches a government desk.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>All-Inclusive Premium Representation</h2>
+            <p>Applying for citizenship from abroad often means dealing with confusing consulate appointments, international mail, and language barriers. I act as your official legal proxy (Pełnomocnik) directly in Poland.</p>
+            
+            <div class="highlight-box">
+                <p><strong>By retaining my services, you receive:</strong></p>
+                <ul>
+                    <li><strong>Direct Filing in Poland:</strong> I bypass the slow embassy system and file your application directly with the government offices in Warsaw or the appropriate province.</li>
+                    <li><strong>In-House Sworn Translations:</strong> The Polish government strictly requires that all foreign documents be translated by a Polish Sworn Translator. I manage all required translations (from Hebrew, English, and other languages) directly within my agency.</li>
+                    <li><strong>Complete Case Management:</strong> All official government correspondence is sent to my office. If the authorities have a question, I answer it on your behalf.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2>From Archival Dust to a European Passport</h2>
+            <p>Your personal time and requirements are important to me. You shouldn't have to become an expert in Polish civil law just to reclaim your heritage. Once we verify your eligibility and gather the historical proof, I take complete ownership of the administrative burden.</p>
+            <p>My goal is to provide a seamless, stress-free experience, turning a complex legal maze into a clear, straight path toward your Polish passport.</p>
+        </div>
+
+    </section>
+
+    <section class="contact-section">
+        <h2>Ready for VIP Service?</h2>
+        <p>Let's fast-track your citizenship application with expert precision.</p>
+        
+        <div class="contact-container">
+            <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
+                
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your case and how I can assist you..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Request VIP Processing</button>
+            </form>
+
+            <div id="form-status">Thank you! Your message has been sent to Polish Heritage successfully. I will be in touch shortly.</div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html#about">About</a>
+            <a href="citizenship.html">Polish Citizenship</a>
+            <a href="index.html#services">Services</a>
+            <a href="about-me.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <p>USA: +1-929-996-7795 | ISRAEL: +972-(0)53-452-5303</p>
+            <p>Email: infopolishcitizenship@gmail.com</p>
+            <br>
+            <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var form = document.getElementById("my-form");
+        var statusMessage = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault(); 
+            var data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    statusMessage.style.display = "block";
+                    form.reset(); 
+                    
+                    setTimeout(function() {
+                        statusMessage.style.display = "none";
+                    }, 6000);
+                } else {
+                    statusMessage.style.display = "block";
+                    statusMessage.style.backgroundColor = "#fef2f2";
+                    statusMessage.style.color = "#991b1b";
+                    statusMessage.style.border = "1px solid #fecaca";
+                    statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+                }
+            }).catch(error => {
+                statusMessage.style.display = "block";
+                statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
+
+</body>
+</html>
