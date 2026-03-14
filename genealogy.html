@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogy & Record Search | Polish Heritage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ALL PREMIUM STYLES EMBEDDED DIRECTLY */
+        :root {
+            --primary-navy: #0A192F; 
+            --accent-gold: #D4AF37; 
+            --light-bg: #F4F7F6;
+            --white: #FFFFFF;
+            --text-dark: #2D3748;
+            --text-light: #A0AEC0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--primary-navy);
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; }
+
+        nav ul { list-style: none; display: flex; gap: 35px; }
+        nav ul li a { color: var(--white); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+        nav ul li a:hover { color: var(--accent-gold); }
+
+        /* PAGE HEADER */
+        .page-header {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .page-header h1 { font-size: 42px; margin-bottom: 15px; color: var(--accent-gold); }
+        .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; }
+
+        /* CONTENT SECTION */
+        .content-section { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
+        .content-block {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        .content-block h2 { color: var(--primary-navy); margin-bottom: 25px; font-size: 28px; }
+        .content-block p { margin-bottom: 20px; font-size: 16px; color: #4A5568; }
+        .content-block ul { margin-left: 25px; margin-bottom: 25px; color: #4A5568; }
+        .content-block ul li { margin-bottom: 10px; }
+        .content-block ul li strong { color: var(--primary-navy); }
+        
+        .highlight-box { background-color: #F8FAFC; padding: 25px; border-radius: 8px; border: 1px solid #E2E8F0; margin: 30px 0; }
+
+        /* CONTACT FORM SECTION */
+        .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; }
+        .contact-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 10px; }
+        .contact-section > p { margin-bottom: 40px; font-size: 16px; color: var(--text-light); }
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border-top: 5px solid var(--accent-gold);
+            position: relative;
+        }
+        .contact-form { display: flex; flex-direction: column; gap: 25px; }
+        .input-group { display: flex; flex-direction: column; text-align: left; }
+        .input-group label { font-size: 13px; color: var(--primary-navy); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .input-group input, .input-group textarea {
+            padding: 16px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-size: 15px; outline: none; background-color: #F8FAFC; color: var(--text-dark);
+        }
+        .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-gold); background-color: var(--white); }
+        
+        .btn {
+            display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease;
+        }
+        .btn:hover { background-color: #F3C94F; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
+        .submit-btn { width: 100%; margin-top: 10px; padding: 18px; font-size: 16px; }
+
+        /* SUCCESS POPUP STYLING */
+        #form-status {
+            display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 15px; animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* FOOTER */
+        footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; font-size: 14px; }
+        .footer-nav { margin-bottom: 30px; }
+        .footer-nav a { margin: 0 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .footer-nav a:hover { color: var(--accent-gold); }
+        .footer-contact p { margin: 10px 0; }
+        .footer-contact span { color: var(--accent-gold); font-weight: 600; }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            header { flex-direction: column; padding: 20px; }
+            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .content-block, .contact-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Polish Heritage</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="citizenship.html">Polish Citizenship</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about-me.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Record Search for Polish Citizenship</h1>
+        <p>Discover Your Polish Jewish Ancestry and Secure Your European Passport</p>
+    </div>
+
+    <section class="content-section">
+        
+        <div class="content-block">
+            <h2>Bridging the Gaps in Family History</h2>
+            <p>Secure your Polish citizenship with precision and expertise. I specialize in assisting individuals to find definitive proof of Polish citizenship. Due to stringent government requirements and the complexities of 20th-century European history, providing the correct documentation is absolutely crucial.</p>
+            <p>With a deep focus on Polish Jewish ancestry, I intimately understand the unique challenges faced by descendants of Holocaust survivors. The profound impact of the Holocaust resulted not only in the tragic loss of life but also in the widespread destruction of vital records, leaving a silence that often surrounds family histories. Many families possess few, if any, documents from that era.</p>
+            <p>I am deeply sensitive to these challenges. We understand that the gaps in your family's story are reflective of the complex legacies of survival, displacement, and memory. With extensive expertise in Polish Jewish genealogy, my goal is to help you reclaim your heritage and secure your Polish citizenship—even when the starting point seems like a puzzle with many missing pieces.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>Your Path to Polish Ancestry Discovery</h2>
+            <p>The journey towards Polish citizenship has captivated many in recent years, leading to an influx of individuals seeking to navigate the application process. However, the pivotal aspect of the application—proving direct, unbroken Polish ancestry—remains a formidable challenge.</p>
+            <p>As a professional genealogist with a background in law studies, I offer specialized services that address this exact challenge. I provide expert record search services for Polish citizenship, making the process manageable and successful, regardless of how limited your initial information might be.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>Why Collaborate with Abraham Neumann?</h2>
+            <ul>
+                <li><strong>Customized Genealogical Exploration:</strong> We dive deep into your heritage, tackling the complexities of Eastern European genealogy. This includes deciphering handwritten, antiquated records in Polish, Russian, German, and Latin, dating back to when Poland was partitioned.</li>
+                <li><strong>Expertise in Navigating Bureaucracy:</strong> With my background in law and intimate knowledge of the Polish bureaucratic landscape, I promise smooth interactions with the Polish State Archives (Archiwum Państwowe) and local registry offices (USC), ensuring an efficient acquisition of documents.</li>
+                <li><strong>Exclusive Archival Access:</strong> I am uniquely positioned to conduct on-the-ground genealogical research in Poland, adhering to strict privacy regulations while exhaustively exploring your family’s history through residential cards, voting lists, census data, and military records.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h2>Key Documents for Your Citizenship Application</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li>The birth certificate of your Polish citizen ancestor and their parents’ marriage certificate.</li>
+                    <li>Proof that your ancestor resided in Poland (or held citizenship) after the state regained independence in 1918.</li>
+                    <li>A continuous chain of birth and marriage certificates linking you directly to your Polish ancestor.</li>
+                    <li>Naturalization records (to prove if and when your ancestor acquired a foreign citizenship, ensuring they did not violate the Polish Acts of 1920 or 1951).</li>
+                </ul>
+            </div>
+            <p>Embarking on the path to uncover your roots is a momentous step. Under my guidance, we assure a smooth and enriching experience. Should you encounter obstacles in assembling your historical documentation, I am fully equipped to undertake the necessary research, ensuring no detail is overlooked.</p>
+        </div>
+
+    </section>
+
+    <section class="contact-section">
+        <h2>How can I help you?</h2>
+        <p>I can do the research on your behalf so you can enjoy the discoveries, or we can navigate the past together. Please get in touch for a personalized evaluation.</p>
+        
+        <div class="contact-container">
+            <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
+                
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me briefly about what you know of your Polish ancestry..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Request a Consultation</button>
+            </form>
+
+            <div id="form-status">Thank you! Your message has been sent to Polish Heritage successfully. I will be in touch shortly.</div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html#about">About</a>
+            <a href="citizenship.html">Polish Citizenship</a>
+            <a href="index.html#services">Services</a>
+            <a href="about-me.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <p>USA: +1-929-996-7795 | ISRAEL: +972-(0)53-452-5303</p>
+            <p>Email: infopolishcitizenship@gmail.com</p>
+            <br>
+            <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var form = document.getElementById("my-form");
+        var statusMessage = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault(); 
+            var data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    statusMessage.style.display = "block";
+                    form.reset(); 
+                    
+                    setTimeout(function() {
+                        statusMessage.style.display = "none";
+                    }, 6000);
+                } else {
+                    statusMessage.style.display = "block";
+                    statusMessage.style.backgroundColor = "#fef2f2";
+                    statusMessage.style.color = "#991b1b";
+                    statusMessage.style.border = "1px solid #fecaca";
+                    statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+                }
+            }).catch(error => {
+                statusMessage.style.display = "block";
+                statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
+
+</body>
+</html>
