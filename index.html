@@ -1,13 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polish Heritage | Abraham Neumann</title>
     <meta name="google-site-verification" content="jnqUmHcDM8s6SzT7HUnA-4GEYJ32BYiCmdrCRcnuipc" />
-    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern CSS Variables for Institutional Brand Consistency */
+        :root {
+            --navy: #0a192f;
+            --navy-light: #112240;
+            --gold: #c5a059;
+            --gold-hover: #e2c08d;
+            --sepia-dark: #1a1412;
+            --text-light: #e6f1ff;
+            --text-muted: #8892b0;
+            --white: #ffffff;
+            --glass: rgba(10, 25, 47, 0.75);
+            --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --card-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        }
+
+        /* Base Reset and Typography Optimization */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: var(--navy);
+            color: var(--text-light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        /* Glassmorphism Sticky Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8%;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        /* Dynamic Hero Section with Historical Overlay */
+        .hero {
+            position: relative;
+            height: 95vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 15%;
+            background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.8)), 
+                        url('https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
+            max-width: 1000px;
+            margin-bottom: 2.5rem;
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        /* Service Cards Architecture */
+        .services-section {
+            padding: 120px 10%;
+            background-color: var(--navy);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 5rem;
+            color: var(--gold);
+        }
+
+        .section-title span {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, var(--navy-light), #0a192f);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: var(--transition-smooth);
+            transform-origin: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(197, 160, 89, 0.4);
+            box-shadow: 0 25px 50px -15px rgba(2, 12, 27, 0.9);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card h3 {
+            color: var(--gold);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            min-height: 4rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            flex-grow: 1;
+            font-size: 1.05rem;
+        }
+
+        /* Button Architecture */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.2rem;
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+            align-self: flex-start;
+        }
+
+        .btn:hover {
+            background: rgba(197, 160, 89, 0.15);
+            color: var(--gold-hover);
+            border-color: var(--gold-hover);
+            transform: scale(1.02);
+        }
+
+        .hero .btn {
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero .btn:hover {
+            background: var(--gold-hover);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Testimonial Section Architecture with Atmospheric Background */
+        .testimonial-section {
+            padding: 120px 10%;
+            background: linear-gradient(rgba(10, 25, 47, 0.88), rgba(10, 25, 47, 0.92)), 
+                        url('https://images.unsplash.com/photo-1589133036854-3e9a4f48483a?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        .testimonial-box {
+            max-width: 900px;
+            margin: 0 auto;
+            font-style: italic;
+            font-size: 1.5rem;
+            line-height: 1.9;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        .testimonial-box::before {
+            content: '"';
+            position: absolute;
+            top: -40px; left: 50%;
+            transform: translateX(-50%);
+            font-size: 5rem;
+            color: rgba(197, 160, 89, 0.3);
+            font-family: serif;
+        }
+
+        .testimonial-author {
+            margin-top: 3rem;
+            font-style: normal;
+            color: var(--gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1rem;
+        }
+
+        /* Story Section with Archival Depth */
+        .story-section {
+            padding: 120px 10%;
+            background-color: var(--sepia-dark);
+        }
+
+        .story-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .story-content p {
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            text-align: left;
+        }
+
+        /* CTA Engagement Section */
+        .cta-section {
+            padding: 100px 10%;
+            background: var(--navy-light);
+            text-align: center;
+            border-top: 1px solid rgba(197, 160, 89, 0.15);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .cta-section p {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        /* Footer Infrastructure */
+        footer {
+            padding: 80px 10% 40px;
+            background-color: var(--navy);
+            text-align: center;
+            border-top: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .footer-contact p {
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: rgba(136, 146, 176, 0.5);
+            border-top: 1px solid rgba(197, 160, 89, 0.05);
+            padding-top: 2rem;
+        }
+
+        /* Responsive Mobile Architecture */
+        @media (max-width: 992px) {
+            header { padding: 1.5rem 5%; }
+            .hero { padding: 0 5%; }
+            .section-title { font-size: 2.2rem; }
+            nav ul { gap: 1.2rem; }
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .testimonial-box { font-size: 1.2rem; }
+        }
+    </style>
 </head>   
-   
 <body>
 
     <header>
@@ -54,12 +400,12 @@
 
     <section class="cta-section">
         <h2>Need Advice?</h2>
-        <p>Do you have Polish ancestry? Are you interested in having a European passport? Do you need help with finding the proof of your Polish ancestry? Do you need help achiving documants from Poland? </p>
+        <p>Do you have Polish ancestry? Are you interested in having a European passport? Do you need help with finding the proof of your Polish ancestry? Do you need help retrieving documents from Poland?</p>
         <a href="about-me.html" class="btn">Contact Me</a>
     </section>
 
     <section class="testimonial-section">
-        <h2 class="section-title">Testimonials</h2>
+        <h2 class="section-title" style="color: white; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px;">Testimonials</h2>
         <div class="testimonial-box">
             "Abraham is a brilliant, dedicated genealogist! He did tremendously deep dives into antiquated texts to find out about my ancestry. He has access to resources which I can’t access, and speaks many languages I don’t – both of which make him successful. I highly recommend him!"
             <div class="testimonial-author">- Jack Domb, Attorney</div>
@@ -70,8 +416,10 @@
         <h2 class="section-title">My Story</h2>
         <div class="story-content">
             <p>I am a Polish Jewish genealogist living in Israel. Since 2023 I have been doing heir and probate research, finding vital records for citizenship purposes and making family trees for individuals with Polish and Polish Jewish ancestry.</p>
-            <p>I am a polyglot speaking several languages I speak a fluent Polish, English, Yiddish, and Hebrew, and a littel bit Russian, which skill helps me to navigate through historical documents and legal texts.</p>
-            <a href="#contact" class="btn">Read More</a>
+            <p>I am a polyglot speaking several languages. I speak fluent Polish, English, Yiddish, and Hebrew, and a little bit of Russian, a skill which helps me navigate through historical documents and legal texts.</p>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn">Read More</a>
+            </div>
         </div>
     </section>
 
@@ -79,15 +427,10 @@
         <div class="footer-contact">
             <p>USA: +1-929-996-7795 | ISRAEL: +972-(0)53-452-5303</p>
             <p>Email: infopolishcitizenship@gmail.com</p>
-            <br>
-            <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
-
-
-
-
-
