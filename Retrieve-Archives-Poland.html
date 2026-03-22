@@ -3,76 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Polish Archives & Birth Records | Polish Heritage</title>
+    <meta name="description" content="Need to find a Polish birth record, marriage certificate, or legal document? I physically retrieve historical and genealogical archives in Poland.">
     
-    <title>Retrieve Polish Archives & Birth Records | Abraham Neumann</title>
-    <meta name="description" content="Need to find a Polish birth record, marriage certificate, or legal document? I physically retrieve historical and genealogical archives in Poland for family history or citizenship.">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* PREMIUM BRAND VARIABLES */
+        :root {
+            --primary-navy: #0A192F; 
+            --accent-gold: #D4AF37; 
+            --light-bg: #F4F7F6;
+            --white: #FFFFFF;
+            --text-dark: #2D3748;
+            --text-light: #A0AEC0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--primary-navy);
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; text-transform: uppercase; }
+
+        nav ul { list-style: none; display: flex; gap: 35px; }
+        nav ul li a { color: var(--white); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+        nav ul li a:hover { color: var(--accent-gold); }
+
+        /* GRAPHIC PAGE HEADER */
+        .page-header {
+            position: relative;
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.95)), 
+                        url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        .page-header h1 { font-size: 42px; margin-bottom: 15px; color: var(--accent-gold); text-shadow: 0 4px 15px rgba(0,0,0,0.8); }
+        .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; }
+
+        /* CONTENT SECTION */
+        .content-section {
+            padding: 80px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .content-block {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        .content-block h2 { color: var(--primary-navy); margin-bottom: 25px; font-size: 28px; }
+        .content-block p { margin-bottom: 20px; font-size: 16px; color: #4A5568; }
+        
+        .content-block ul, .content-block ol { margin-left: 25px; margin-bottom: 25px; color: #4A5568; }
+        .content-block ul li, .content-block ol li { margin-bottom: 12px; }
+        .content-block ul li strong, .content-block ol li strong { color: var(--primary-navy); }
+
+        .highlight-box {
+            background-color: #F8FAFC;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            margin: 30px 0;
+            border-top: 4px solid var(--primary-navy);
+        }
+        .highlight-box h3 { color: var(--primary-navy); margin-bottom: 10px; font-size: 20px; }
+
+        /* CONTACT FORM SECTION */
+        .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; }
+        .contact-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 10px; }
+        .contact-section > p { margin-bottom: 40px; font-size: 16px; color: var(--text-light); }
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border-top: 5px solid var(--accent-gold);
+            position: relative;
+        }
+        .contact-form { display: flex; flex-direction: column; gap: 25px; }
+        .input-group { display: flex; flex-direction: column; text-align: left; }
+        .input-group label { font-size: 13px; color: var(--primary-navy); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .input-group input, .input-group textarea {
+            padding: 16px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-size: 15px; outline: none; background-color: #F8FAFC; color: var(--text-dark);
+        }
+        .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-gold); background-color: var(--white); }
+        
+        .btn {
+            display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease;
+        }
+        .btn:hover { background-color: #F3C94F; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
+        .submit-btn { width: 100%; margin-top: 10px; padding: 18px; font-size: 16px; }
+
+        /* SUCCESS POPUP STYLING */
+        #form-status {
+            display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 15px; animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* FOOTER */
+        footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; font-size: 14px; }
+        .footer-nav { margin-bottom: 30px; }
+        .footer-nav a { margin: 0 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .footer-nav a:hover { color: var(--accent-gold); }
+        .footer-contact p { margin: 10px 0; }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            header { flex-direction: column; padding: 20px; }
+            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .content-block, .contact-container { padding: 30px 20px; }
+            .page-header h1 { font-size: 32px; }
+        }
+    </style>
 </head>
 <body>
 
     <header>
+        <div class="logo">Polish Heritage</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="simplified.html">Simplified Naturalization</a></li>
-                <li><a href="citizenship.html">Citizenship Verification</a></li>
-                <li><a href="Retrieve-Archives-Poland.html">Retrieve Polish Documents</a></li>
-                <li><a href="genealogy.html">Jewish Genealogy</a></li>
-                <li><a href="about-me.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="citizenship.html">Polish Citizenship</a></li>
+                <li><a href="Retrieve-Archives-Poland.html">Document Retrieval</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about-me.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <div class="page-header">
+        <h1>Expert Polish Archive Retrieval</h1>
+        <p>Finding hard-to-reach historical documents, vital records, and legal files deep within Polish State Archives and local registries.</p>
+    </div>
+
+    <section class="content-section">
         
-        <section class="hero-section">
-            <h1>Expert Polish Archive Retrieval</h1>
-            <h2>Finding Hard-to-Reach Historical Documents & Vital Records in Poland</h2>
-            <p>Millions of Polish and Jewish records are not digitized, are written in antiquated languages, or are buried deep within local registry offices (USC) and state archives. If you have hit a brick wall due to language barriers or complex Polish bureaucracy, I act as your boots on the ground in Poland to retrieve your family's documents.</p>
-        </section>
+        <div class="content-block">
+            <h2>The Archival Challenge</h2>
+            <p>Millions of Polish and Jewish records are not digitized, are written in antiquated languages, or are buried deep within local registry offices (USC) and state archives. If you have hit a brick wall due to language barriers or complex Polish bureaucracy, I am here to act as your boots on the ground in Poland.</p>
+            
+            <div class="highlight-box">
+                <h3>Genealogy & Family History (No Citizenship Required)</h3>
+                <p><strong>You do not need to be applying for a European passport to use my services.</strong> Many of my clients are simply researching their family tree and want to hold a piece of their history. If you just want to find your grandfather's birth record, your great-grandparents' marriage certificate, or historical death records for personal genealogical research, I will locate, retrieve, and translate these documents for you.</p>
+            </div>
+        </div>
 
-        <section class="genealogy-only-box">
-            <h3>Genealogy & Family History (No Citizenship Required)</h3>
-            <p><strong>You do not need to be applying for a European passport to use my services.</strong> Many of my clients are simply researching their family tree and want to hold a piece of their history. If you just want to find your grandfather's birth record, your great-grandparents' marriage certificate, or historical death records for personal genealogical research, I will locate, retrieve, and translate these documents for you.</p>
-        </section>
-
-        <section class="services-list">
-            <h3>Documents I Retrieve Beyond Standard Vital Records</h3>
-            <p>As a professional genealogist and legal researcher, I conduct deep-dive research into multiple Polish archival systems to retrieve:</p>
+        <div class="content-block">
+            <h2>Beyond Standard Vital Records</h2>
+            <p>As a professional genealogist and legal researcher, I do not just look for standard certificates. I conduct deep-dive research into multiple Polish archival systems to retrieve:</p>
             <ul>
-                <li><strong>Birth, Marriage & Death Certificates:</strong> Locating historical civil registry documents across changing borders and jurisdictions.</li>
-                <li><strong>Property & Land Registries (Księgi Wieczyste):</strong> Uncovering historical deeds and property ownership records.</li>
+                <li><strong>Birth, Marriage & Death Certificates:</strong> Locating historical civil registry documents across changing borders and jurisdictions (Russian, Prussian, and Austrian partitions).</li>
+                <li><strong>Property & Land Registries (Księgi Wieczyste):</strong> Uncovering historical deeds, property ownership, and expropriation records for restitution cases.</li>
                 <li><strong>Court & Probate Records:</strong> Retrieving legal heirship documents, historical court rulings, and civil contracts.</li>
-                <li><strong>Military & Conscription Archives:</strong> Finding records of ancestors who served in the Polish Army (1918-1939).</li>
-                <li><strong>Holocaust & Ghetto Records:</strong> Navigating the Jewish Historical Institute (ŻIH) and concentration camp archives for proof of residence or persecution.</li>
+                <li><strong>Military & Conscription Archives:</strong> Finding records of ancestors who served in the Polish Army, including the Interwar period (1918-1939).</li>
+                <li><strong>Holocaust & Ghetto Records:</strong> Navigating the Jewish Historical Institute (ŻIH), the IPN, and concentration camp archives to find proof of residence or persecution.</li>
                 <li><strong>Voter & Tax Registries:</strong> Finding business licenses and municipal voting lists that prove an ancestor's residency in Poland.</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="why-hire-me">
-            <h3>Why My Approach Works</h3>
-            <p>Retrieving documents in Poland requires the ability to read the documents once you find them.</p>
+        <div class="content-block">
+            <h2>The Multi-Lingual & Legal Advantage</h2>
+            <p>Retrieving documents in Poland requires more than just knowing where the building is. It requires the ability to read the documents once you find them.</p>
             <ul>
-                <li><strong>Multi-Lingual Expertise:</strong> Documents from the same town might be written in Polish, Russian, German, Hebrew, or Yiddish. I speak fluent Polish, English, Yiddish, and Hebrew, allowing me to translate and verify the documents immediately.</li>
+                <li><strong>Multi-Lingual Expertise:</strong> Because historical borders shifted constantly, documents from the same town might be written in Polish, Russian, German, Hebrew, or Yiddish. I speak fluent Polish, English, Yiddish, and Hebrew, allowing me to translate and verify documents on the spot.</li>
                 <li><strong>Legal Background:</strong> My background in law means I understand the strict legal requirements the Polish government demands. I don't just find a piece of paper; I ensure it is the correct legal proof you need.</li>
-                <li><strong>Dual Presence:</strong> Residing in both Israel and Poland allows me to work directly with Israeli clients while physically accessing archives across Poland.</li>
+                <li><strong>Dual Presence:</strong> Residing in both Israel and Poland allows me to work directly with clients while physically accessing physical archives across Poland.</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="call-to-action">
-            <h3>How It Works</h3>
+        <div class="content-block">
+            <h2>The Retrieval Process</h2>
             <ol>
-                <li><strong>Free Initial Assessment:</strong> We review the clues, names, and towns you already have.</li>
-                <li><strong>Targeted Archival Strategy:</strong> I identify exactly which State Archives or local USC offices hold the necessary books.</li>
-                <li><strong>Retrieval & Translation:</strong> I physically or digitally retrieve the records and provide a clear summary or translation.</li>
+                <li><strong>Free Initial Assessment:</strong> We review the clues, names, dates, and towns you already have.</li>
+                <li><strong>Targeted Archival Strategy:</strong> I identify exactly which State Archives, local USC offices, or religious parishes hold the necessary books.</li>
+                <li><strong>Retrieval & Translation:</strong> I physically or digitally retrieve the records and provide a clear summary or translation of the findings to you.</li>
             </ol>
-            <p><strong>Don't let your research stop at a dead end.</strong></p>
-            <a href="contact.html" class="button">Contact Me to Start Your Archive Search Today</a>
-        </section>
+        </div>
 
-    </main>
+    </section>
+
+    <section class="contact-section">
+        <h2>Start Your Archive Search</h2>
+        <p>Submit your ancestor's details below to see if their records can be found.</p>
+        
+        <div class="contact-container">
+            
+            <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
+                
+                <div class="input-group">
+                    <label for="name">Your Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">What Documents Are You Looking For?</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Include known names, dates of birth, and towns in Poland if you have them..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Request Document Search</button>
+            </form>
+
+            <div id="form-status">Thank you! Your request has been sent successfully. I will review the details and contact you shortly.</div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html#about">About</a>
+            <a href="citizenship.html">Polish Citizenship</a>
+            <a href="index.html#services">Services</a>
+            <a href="about-me.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <p>USA: +1-929-996-7795 | ISRAEL: +972-(0)53-452-5303</p>
+            <p>Email: infopolishcitizenship@gmail.com</p>
+            <br>
+            <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var form = document.getElementById("my-form");
+        var statusMessage = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault(); 
+            var data = new FormData(event.target);
+            
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    statusMessage.style.display = "block";
+                    form.reset(); 
+                    
+                    setTimeout(function() {
+                        statusMessage.style.display = "none";
+                    }, 6000);
+                } else {
+                    statusMessage.style.display = "block";
+                    statusMessage.style.backgroundColor = "#fef2f2";
+                    statusMessage.style.color = "#991b1b";
+                    statusMessage.style.border = "1px solid #fecaca";
+                    statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+                }
+            }).catch(error => {
+                statusMessage.style.display = "block";
+                statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
 
 </body>
 </html>
