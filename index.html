@@ -496,4 +496,52 @@
         <h2 class="section-title" style="color: white; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px;">Testimonials</h2>
         <div class="testimonial-box">
             "Abraham is a brilliant, dedicated genealogist! He did tremendously deep dives into antiquated texts to find out about my ancestry. He has access to resources which I can’t access, and speaks many languages I don’t – both of which make him successful. I highly recommend him!"
-            <div class="testimonial-author">- Jack Domb
+            <div class="testimonial-author">- Jack Domb, Attorney</div>
+        </div>
+    </section>
+
+    <section id="about" class="story-section">
+        <h2 class="section-title">My Story</h2>
+        <div class="story-content">
+            <p>I am a Polish Jewish genealogist living in Israel. Since 2023 I have been doing heir and probate research, finding vital records for citizenship purposes and making family trees for individuals with Polish and Polish Jewish ancestry.</p>
+            <p>I am a polyglot speaking several languages. I speak fluent Polish, English, Yiddish, and Hebrew, and a little bit of Russian, a skill which helps me navigate through historical documents and legal texts.</p>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-contact">
+            <p>USA: +1-929-996-7795 | ISRAEL: +972-(0)53-452-5303</p>
+            <p>Email: infopolishcitizenship@gmail.com</p>
+            <div class="copyright">
+                <p id="copyright-text">&copy; 2024 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Grab the elements from the DOM
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Toggle the menu when clicking the hamburger icon
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close the menu automatically when a user clicks a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Automatically update the copyright year
+        document.getElementById('copyright-text').innerHTML = `&copy; ${new Date().getFullYear()} Polish Heritage | Abraham Neumann. All rights reserved.`;
+    </script>
+</body>
+</html>
