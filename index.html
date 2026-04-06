@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Polish Heritage | Abraham Neumann</title>
-    <link rel="canonical" href="https://haritagecitizenships.com/" />
+    
+    <link rel="canonical" href="https://heritagecitizenships.com/" />
     <meta name="title" content="Polish Heritage | Abraham Neumann">
     <meta name="description" content="Expert Polish Jewish genealogy services. Assisting clients with ancestry proof, simplified naturalization, and document retrieval from Polish archives.">
     <meta name="google-site-verification" content="jnqUmHcDM8s6SzT7HUnA-4GEYJ32BYiCmdrCRcnuipc" />
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://haritagecitizenships.com/">
+    <meta property="og:url" content="https://heritagecitizenships.com/">
     <meta property="og:title" content="Polish Heritage | Abraham Neumann">
     <meta property="og:description" content="Expert Polish Jewish genealogy services. Assisting clients with ancestry proof, simplified naturalization, and document retrieval from Polish archives.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80&w=1200">
 
-    <meta property="twitter:url" content="https://haritagecitizenships.com/">
+    <meta property="twitter:url" content="https://heritagecitizenships.com/">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Polish Heritage | Abraham Neumann">
     <meta property="twitter:description" content="Expert Polish Jewish genealogy services. Assisting clients with ancestry proof, simplified naturalization, and document retrieval from Polish archives.">
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80&w=1200">
-   
+    
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -49,6 +50,8 @@
 
         html {
             scroll-behavior: smooth;
+            /* Added to prevent the sticky header from covering section titles when clicked */
+            scroll-padding-top: 100px; 
         }
 
         body {
@@ -398,6 +401,7 @@
                 opacity: 0;
                 visibility: hidden;
                 transition: var(--transition-smooth);
+                z-index: 1999;
             }
 
             nav.active {
@@ -428,7 +432,7 @@
             .testimonial-box { font-size: 1.2rem; }
         }
     </style>
-</head>  
+</head>
 <body>
 
     <header>
@@ -464,12 +468,12 @@
                 <h3>Genealogy for Ancestry Proof</h3>
                 <p>I am Abraham Neumann, a professional Polish Jewish genealogist with a background in law, residing both in Poland and in Israel. Specializing in Polish Jewish Genealogy, I assist clients who may have limited knowledge about their Polish ancestry. I specialize in proving citizenship in challenging cases where others have given up.</p>
                 <a href="genealogy.html" class="btn">Read More</a>
-            </div>            
+            </div>
             
             <div class="service-card">
                 <h3>Simplified Naturalization</h3>
                 <p>If you have Polish roots and your ancestors may have renounced or lost their citizenship, Simplified Naturalization is tailored for you. This straightforward process allows you to reacquire Polish citizenship without the need for residency in Poland.</p>
-                <a href="simplified.html" class="btn">Read More</a>  
+                <a href="simplified.html" class="btn">Read More</a>
             </div>
 
             <div class="service-card">
