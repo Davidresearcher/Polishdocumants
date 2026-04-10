@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Work | Fast Polish Document Retrieval</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-navy: #0A192F; 
+            --accent-gold: #D4AF37; 
+            --light-bg: #F4F7F6;
+            --white: #FFFFFF;
+            --text-dark: #2D3748;
+            --text-light: #A0AEC0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+
+        /* --- THE FIXED HEADER --- */
+        header {
+            background-color: var(--primary-navy);
+            padding: 20px 5%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Fixed the logo from breaking onto two lines */
+        .logo { 
+            color: var(--accent-gold); 
+            font-size: 24px; 
+            letter-spacing: 2px; 
+            white-space: nowrap; 
+        }
+        
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 40px; 
+            align-items: center;
+        }
+        nav ul li a { 
+            color: var(--white); 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            font-weight: 600; 
+        }
+        nav ul li a:hover { color: var(--accent-gold); }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1513622470522-26c311a84f59?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .page-header h1 { font-size: 46px; margin-bottom: 15px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px;}
+        .page-header p { font-size: 20px; max-width: 800px; margin: 0 auto; font-weight: 300; }
+
+        /* CONTENT SECTION */
+        .content-section { padding: 80px 5%; max-width: 1100px; margin: 0 auto; }
+        
+        /* THE "BYPASS" GRID */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .content-block {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-gold);
+            height: 100%;
+        }
+        .content-block h2 { color: var(--primary-navy); margin-bottom: 20px; font-size: 24px; }
+        .content-block p { margin-bottom: 15px; font-size: 15px; color: #4A5568; }
+
+        .full-width-block {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .full-width-block h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 20px; }
+        .full-width-block p { font-size: 18px; font-weight: 300; max-width: 800px; margin: 0 auto; color: #E2E8F0; }
+        .price-tag { font-size: 48px; color: var(--accent-gold); font-family: 'Cinzel', serif; font-weight: 700; margin: 20px 0; display: block;}
+
+        .btn {
+            display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 18px 40px; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; margin-top: 20px;
+        }
+        .btn:hover { background-color: #F3C94F; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
+
+        footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; }
+
+        @media(max-width: 768px) {
+            header { flex-direction: column; padding: 20px; gap: 20px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .page-header h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">POLISH HERITAGE</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="citizenship.html">Citizenship Services</a></li>
+                <li><a href="prove-jewish-ancestry.html">Jewish Ancestry</a></li>
+                <li><a href="about-me.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Speed. Efficiency. Results.</h1>
+        <p>How we bypass the bureaucracy to secure your Polish documents in record time.</p>
+    </div>
+
+    <section class="content-section">
+        
+        <div class="feature-grid">
+            <div class="content-block">
+                <h2>Bypassing the Archival Wait Times</h2>
+                <p>The Polish state archive system (Archiwum Państwowe) is notoriously slow. If you apply for document retrieval through standard official channels, your request enters a massive backlog. It is not uncommon to wait <strong>one to two months</strong> just to receive an initial response.</p>
+                <p><strong>We don't wait in line.</strong> We bypass the official mail system entirely. I manage a dedicated team of professional researchers stationed all across Poland. When you hire us, a local researcher physically walks into the regional archive or local registry office (USC) to locate and pull your ancestor's records by hand.</p>
+                <p>By putting "boots on the ground," we cut the standard processing time down from months to <strong>as little as 2 to 3 weeks.</strong></p>
+            </div>
+
+            <div class="content-block">
+                <h2>Global Apostille Network (USA & Israel)</h2>
+                <p>Retrieving documents from Poland is only half the battle. To successfully apply for citizenship, your domestic vital records (your birth certificate, your parents' marriage certificates, etc.) must be officially legalized with an Apostille.</p>
+                <p>Navigating different state departments can be a nightmare, but we handle it seamlessly. We have extensive experience expediting the Apostille process for all <strong>American vital records</strong> across different states.</p>
+                <p>Additionally, if you reside in Israel or need Israeli vital records legalized, we have deep connections and direct leads in Israel to get your documents Apostilled quickly and correctly for the Polish government.</p>
+            </div>
+        </div>
+
+        <div class="full-width-block">
+            <h2>Transparent, Accessible Pricing</h2>
+            <p>Premium genealogical research and expedited document retrieval shouldn't require a blank check. While other law firms and agencies charge exorbitant, hidden fees for basic archive searches, we focus on efficiency to keep costs down.</p>
+            
+            <span class="price-tag">~$300 Average Cost</span>
+            
+            <p>Our localized research model allows us to offer highly competitive pricing. While complex cases requiring multi-city searches may vary, our average document retrieval and genealogy search sits around the $300 mark. You get unparalleled speed and expert on-the-ground access at a fraction of the traditional cost.</p>
+            
+            <a href="about-me.html" class="btn">Start Your Search Now</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-contact">
+            <p>USA: +1-845-587-0531 | ISRAEL: +972-(0)53-452-5303</p>
+            <p>Email: infopolishcitizenship@gmail.com</p>
+            <br>
+            <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
