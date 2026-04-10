@@ -76,7 +76,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 8%;
+            padding: 1.2rem 5%; /* Reduced padding slightly to fit the new link */
             background: var(--glass);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -90,6 +90,7 @@
             color: var(--gold);
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            white-space: nowrap; /* THE FIX: Keeps the logo on one single line */
         }
 
         /* Hamburger Menu Icon (Hidden on Desktop) */
@@ -112,7 +113,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2.2rem; /* Slightly reduced gap to accommodate the extra menu item safely */
         }
 
         nav ul li a {
@@ -447,8 +448,8 @@
         <nav id="nav-menu">
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="how-we-work.html">How We Work</a></li>
                 <li><a href="#services">Citizenship Services</a></li>
-                <li><a href="Retrieve-Archives-Poland.html">Document Retrieval</a></li>
                 <li><a href="about-me.html">Contact</a></li>
             </ul>
         </nav>
