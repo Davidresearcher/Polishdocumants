@@ -20,7 +20,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        
         body {
             font-family: 'Montserrat', sans-serif;
             color: var(--text-dark);
@@ -42,7 +42,7 @@
         }
 
         .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; }
-
+        
         nav ul { list-style: none; display: flex; gap: 35px; }
         nav ul li a { color: var(--white); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
         nav ul li a:hover { color: var(--accent-gold); }
@@ -57,6 +57,56 @@
         }
         .page-header h1 { font-size: 42px; margin-bottom: 15px; color: var(--accent-gold); }
         .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; }
+
+        /* STRATEGIC FRAMEWORK SECTION (NEW UI GRAPHICS) */
+        .framework-section {
+            background-color: #050D1A; /* Darker Navy for contrast */
+            color: var(--white);
+            padding: 80px 5%;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+        
+        .framework-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 20px; }
+        .framework-intro { max-width: 900px; margin: 0 auto 50px auto; font-size: 17px; color: var(--text-light); line-height: 1.9; font-weight: 300; }
+        
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .framework-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .framework-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .framework-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gold);
+        }
+
+        .framework-card h3 { color: var(--white); font-size: 20px; margin-bottom: 15px; letter-spacing: 1px; }
+        .framework-card p { font-size: 15px; color: var(--text-light); line-height: 1.7; }
 
         /* CONTENT SECTION */
         .content-section { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
@@ -80,6 +130,7 @@
         .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; }
         .contact-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 10px; }
         .contact-section > p { margin-bottom: 40px; font-size: 16px; color: var(--text-light); }
+        
         .contact-container {
             max-width: 700px;
             margin: 0 auto;
@@ -123,6 +174,7 @@
             header { flex-direction: column; padding: 20px; }
             nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
             .content-block, .contact-container { padding: 30px 20px; }
+            .framework-section { padding: 60px 20px; }
         }
     </style>
 </head>
@@ -145,8 +197,29 @@
         <p>Speed, Precision, and White-Glove Service for Your Application</p>
     </div>
 
-    <section class="content-section">
+    <section class="framework-section">
+        <h2>Strategic Legal Framework</h2>
+        <p class="framework-intro">The acquisition of Polish citizenship by descent is an intricate legal process governed by the foundational principle of <strong>jus sanguinis</strong>, ensuring that the right of blood transcends geographic boundaries and the passage of time.</p>
         
+        <div class="framework-grid">
+            <div class="framework-card">
+                <h3>The Jewish Diaspora</h3>
+                <p>For the global Jewish diaspora, particularly those whose ancestors emigrated during the tumultuous decades of the 20th century, the process is not one of naturalization but rather a formal confirmation of a pre-existing legal status.</p>
+            </div>
+            
+            <div class="framework-card">
+                <h3>Legislative Analysis</h3>
+                <p>This procedure, legally designated as the confirmation of possession or loss of Polish citizenship, requires an exhaustive reconstruction of family lineage and a rigorous analysis of the shifting legislative landscape from 1920 to the present day.</p>
+            </div>
+
+            <div class="framework-card">
+                <h3>Beyond a Passport</h3>
+                <p>The pursuit of a Polish passport represents more than the acquisition of a travel document; it is a restoration of a historical link to a nation-state that serves as a gateway to the European Union and its attendant rights of residence, labor, and education.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
         <div class="content-block">
             <h2>Speed Through Flawless Precision</h2>
             <p>Locating your ancestors' documents is only the first half of the battle. The second half is the official legal process known as the <strong>Confirmation of Polish Citizenship</strong>. This application is submitted to the Polish Provincial Governor (Voivodeship) and can be an incredibly rigid, bureaucratic process.</p>
@@ -173,7 +246,6 @@
             <p>Your personal time and requirements are important to me. You shouldn't have to become an expert in Polish civil law just to reclaim your heritage. Once we verify your eligibility and gather the historical proof, I take complete ownership of the administrative burden.</p>
             <p>My goal is to provide a seamless, stress-free experience, turning a complex legal maze into a clear, straight path toward your Polish passport.</p>
         </div>
-
     </section>
 
     <section class="contact-section">
@@ -200,7 +272,6 @@
                 
                 <button type="submit" class="btn submit-btn">Request VIP Processing</button>
             </form>
-
             <div id="form-status">Thank you! Your message has been sent to Polish Heritage successfully. I will be in touch shortly.</div>
             
         </div>
@@ -238,7 +309,7 @@
             }).then(response => {
                 if (response.ok) {
                     statusMessage.style.display = "block";
-                    form.reset(); 
+                    form.reset();
                     
                     setTimeout(function() {
                         statusMessage.style.display = "none";
@@ -257,6 +328,5 @@
         }
         form.addEventListener("submit", handleSubmit);
     </script>
-
 </body>
 </html>
