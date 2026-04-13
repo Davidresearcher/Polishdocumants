@@ -252,7 +252,7 @@
             .editorial-container { padding: 40px 30px; margin: 30px 15px; }
             header { flex-direction: column; padding: 20px; }
             nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .process-arrow { display: none; } /* Stack process flow nicely on mobile */
+            .process-arrow { display: none; } 
         }
     </style>
 </head>
@@ -593,78 +593,7 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const accordionContent = button.nextElementSibling;
-                const icon = button.querySelector('.icon');
-                
-                button.classList.toggle('active');
-                
-                if (button.classList.contains('active')) {
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                    accordionContent.style.paddingTop = '15px';
-                    icon.textContent = '-';
-                } else {
-                    accordionContent.style.maxHeight = 0;
-                    accordionContent.style.paddingTop = '0';
-                    icon.textContent = '+';
-                }
-            });
-        });
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does serving in the IDF or US Army mean I lost my right to Polish citizenship?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Military service in a foreign army prior to January 19, 1951, generally resulted in the automatic loss of Polish citizenship, unless the service occurred within Allied forces during WWII or the individual remained subject to the Polish draft. For service occurring after 1951, there is no impact."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "My ancestors were from a town that is now in Ukraine/Belarus (Kresy). Do I still qualify?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, provided your ancestors were Polish citizens residing in those territories after 1920 and did not fall victim to the 1951 mass revocation. Proving they left before the 1945 border shifts is the key to a successful claim."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if my ancestors' Polish birth records were destroyed in WWII?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The destruction of a primary birth record is rarely an absolute barrier. We reconstruct a 'Shadow Portfolio' of secondary evidence recognized by the Voivodeship, which legally substitutes for missing vital certificates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "My Polish grandmother married a foreigner before 1951. Can I still claim citizenship?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If the next generation was born after January 1951, the grandmother's Polish status remains the legal source of your claim, as the 1951 Act ended the marriage penalty."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "My grandfather changed his name at Ellis Island/in Israel. Will this disqualify me?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Name changes do not disqualify you, provided we establish a Legal Continuity of Identity through a certified paper trail such as Name Change Certificates or Naturalization Petitions."
-          }
-        },
-        {
-        <div class="accordion-item" style="border-bottom: 1px solid #E2E8F0;">
+                <div class="accordion-item" style="border-bottom: 1px solid #E2E8F0;">
                     <button class="accordion-header" style="width: 100%; padding: 25px 30px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left;">
                         <h3 style="font-size: 16px; color: var(--primary-navy); margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">6. My parents were forced out of Poland in 1968. Can I reclaim citizenship?</h3>
                         <span class="icon" style="color: var(--accent-gold); font-size: 24px; font-weight: bold;">+</span>
@@ -758,7 +687,8 @@
                         </div>
                     </div>
                 </div>
-         <div class="accordion-item" style="border-bottom: 1px solid #E2E8F0;">
+
+                <div class="accordion-item" style="border-bottom: 1px solid #E2E8F0;">
                     <button class="accordion-header" style="width: 100%; padding: 25px 30px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left;">
                         <h3 style="font-size: 16px; color: var(--primary-navy); margin: 0; font-family: 'Montserrat', sans-serif; font-weight: 600;">11. Do I have to move to Poland or pay taxes there?</h3>
                         <span class="icon" style="color: var(--accent-gold); font-size: 24px; font-weight: bold;">+</span>
@@ -853,8 +783,30 @@
                     </div>
                 </div>
 
-            </div> </div>
+            </div>
+        </div>
     </section>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+                const icon = button.querySelector('.icon');
+                
+                button.classList.toggle('active');
+                
+                if (button.classList.contains('active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                    accordionContent.style.paddingTop = '15px';
+                    icon.textContent = '-';
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                    accordionContent.style.paddingTop = '0';
+                    icon.textContent = '+';
+                }
+            });
+        });
+    </script>
 
     <script type="application/ld+json">
     {
@@ -983,8 +935,6 @@
         }
       ]
     }
-    </script>
-        
     </script>
 
     <section class="contact-section">
