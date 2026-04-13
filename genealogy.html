@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genealogy & Record Search | Polish Heritage</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" href="favicon.png">
+    <meta name="description" content="Expert Polish Jewish genealogy and record search services. We bridge the gaps in family history to secure your ancestral proof for citizenship.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -46,6 +46,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; }
@@ -59,8 +62,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: var(--primary-navy);
             color: var(--white);
             text-align: center;
-            padding: 80px 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 100px 20px;
+            border-bottom: 4px solid var(--accent-gold);
         }
         .page-header h1 { font-size: 42px; margin-bottom: 15px; color: var(--accent-gold); }
         .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; }
@@ -81,7 +84,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .content-block ul li { margin-bottom: 10px; }
         .content-block ul li strong { color: var(--primary-navy); }
         
-        .highlight-box { background-color: #F8FAFC; padding: 25px; border-radius: 8px; border: 1px solid #E2E8F0; margin: 30px 0; }
+        .highlight-box { 
+            background-color: #F8FAFC; 
+            padding: 30px; 
+            border-radius: 8px; 
+            border: 1px solid #E2E8F0; 
+            margin: 30px 0;
+            border-top: 4px solid var(--primary-navy);
+        }
 
         /* CONTACT FORM SECTION */
         .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; }
@@ -123,7 +133,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .footer-nav a { margin: 0 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
         .footer-nav a:hover { color: var(--accent-gold); }
         .footer-contact p { margin: 10px 0; }
-        .footer-contact span { color: var(--accent-gold); font-weight: 600; }
+        .footer-contact a { color: var(--accent-gold); font-weight: 600; }
 
         /* RESPONSIVE */
         @media(max-width: 768px) {
@@ -134,13 +144,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </head>
 <body>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7LXB4ZV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <div class="logo">Polish Heritage</div>
         <nav>
             <ul>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="citizenship.html">Polish Citizenship</a></li>
+                <li><a href="Retrieve-Archives-Poland.html">Document Retrieval</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="about-me.html">Contact</a></li>
             </ul>
@@ -157,67 +169,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="content-block">
             <h2>Bridging the Gaps in Family History</h2>
             <p>Secure your Polish citizenship with precision and expertise. I specialize in assisting individuals to find definitive proof of Polish citizenship. Due to stringent government requirements and the complexities of 20th-century European history, providing the correct documentation is absolutely crucial.</p>
-            <p>With a deep focus on Polish Jewish ancestry, I intimately understand the unique challenges faced by descendants of Holocaust survivors. The profound impact of the Holocaust resulted not only in the tragic loss of life but also in the widespread destruction of vital records, leaving a silence that often surrounds family histories. Many families possess few, if any, documents from that era.</p>
-            <p>I am deeply sensitive to these challenges. We understand that the gaps in your family's story are reflective of the complex legacies of survival, displacement, and memory. With extensive expertise in Polish Jewish genealogy, my goal is to help you reclaim your heritage and secure your Polish citizenship—even when the starting point seems like a puzzle with many missing pieces.</p>
+            <p>With a deep focus on Polish Jewish ancestry, I intimately understand the unique challenges faced by descendants of Holocaust survivors. Silence often surrounds family histories from this era. Many families possess few, if any, documents.</p>
+            <p>I am deeply sensitive to these challenges. With extensive expertise in Polish Jewish genealogy, my goal is to help you reclaim your heritage and secure your Polish citizenship—even when the starting point seems like a puzzle with many missing pieces.</p>
         </div>
 
         <div class="content-block">
             <h2>Your Path to Polish Ancestry Discovery</h2>
-            <p>The journey towards Polish citizenship has captivated many in recent years, leading to an influx of individuals seeking to navigate the application process. However, the pivotal aspect of the application—proving direct, unbroken Polish ancestry—remains a formidable challenge.</p>
-            <p>As a professional genealogist with a background in law studies, I offer specialized services that address this exact challenge. I provide expert record search services for Polish citizenship, making the process manageable and successful, regardless of how limited your initial information might be.</p>
+            <p>As a professional genealogist with a background in law studies, I offer specialized services that address the formidable challenge of proving direct, unbroken Polish ancestry. I provide expert record search services that make the process manageable and successful.</p>
         </div>
 
         <div class="content-block">
-            <h2>Why Collaborate with Abraham Neumann?</h2>
+            <h2>The Abraham Neumann Advantage</h2>
             <ul>
-                <li><strong>Customized Genealogical Exploration:</strong> We dive deep into your heritage, tackling the complexities of Eastern European genealogy. This includes deciphering handwritten, antiquated records in Polish, Russian, German, and Latin, dating back to when Poland was partitioned.</li>
-                <li><strong>Expertise in Navigating Bureaucracy:</strong> With my background in law and intimate knowledge of the Polish bureaucratic landscape, I promise smooth interactions with the Polish State Archives (Archiwum Państwowe) and local registry offices (USC), ensuring an efficient acquisition of documents.</li>
-                <li><strong>Exclusive Archival Access:</strong> I am uniquely positioned to conduct on-the-ground genealogical research in Poland, adhering to strict privacy regulations while exhaustively exploring your family’s history through residential cards, voting lists, census data, and military records.</li>
+                <li><strong>Customized Exploration:</strong> Deciphering handwritten, antiquated records in Polish, Russian, German, and Latin.</li>
+                <li><strong>Bureaucratic Expertise:</strong> Smooth interactions with the Polish State Archives (Archiwum Państwowe) and local registry offices (USC).</li>
+                <li><strong>Exclusive On-Ground Access:</strong> Forensic exploration through residential cards, voting lists, census data, and military records.</li>
             </ul>
         </div>
 
         <div class="content-block">
-            <h2>Key Documents for Your Citizenship Application</h2>
+            <h2>Key Documents Required</h2>
             <div class="highlight-box">
                 <ul>
-                    <li>The birth certificate of your Polish citizen ancestor and their parents’ marriage certificate.</li>
-                    <li>Proof that your ancestor resided in Poland (or held citizenship) after the state regained independence in 1918.</li>
-                    <li>A continuous chain of birth and marriage certificates linking you directly to your Polish ancestor.</li>
-                    <li>Naturalization records (to prove if and when your ancestor acquired a foreign citizenship, ensuring they did not violate the Polish Acts of 1920 or 1951).</li>
+                    <li>Birth certificates of the Polish ancestor and parents’ marriage certificates.</li>
+                    <li>Proof of residency or citizenship in Poland post-1918.</li>
+                    <li>A continuous chain of birth and marriage certificates linking generations.</li>
+                    <li>Naturalization records to audit foreign citizenship acquisition against the 1920/1951 Acts.</li>
                 </ul>
             </div>
-            <p>Embarking on the path to uncover your roots is a momentous step. Under my guidance, we assure a smooth and enriching experience. Should you encounter obstacles in assembling your historical documentation, I am fully equipped to undertake the necessary research, ensuring no detail is overlooked.</p>
         </div>
 
     </section>
 
     <section class="contact-section">
-        <h2>How can I help you?</h2>
-        <p>I can do the research on your behalf so you can enjoy the discoveries, or we can navigate the past together. Please get in touch for a personalized evaluation.</p>
+        <h2>Request a Personalized Evaluation</h2>
+        <p>Let's navigate the past together. I can conduct forensic research on your behalf.</p>
         
         <div class="contact-container">
             <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
-                
                 <div class="input-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
-                
                 <div class="input-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="john@example.com" required>
                 </div>
-                
                 <div class="input-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Tell me briefly about what you know of your Polish ancestry..." required></textarea>
                 </div>
-                
                 <button type="submit" class="btn submit-btn">Request a Consultation</button>
             </form>
-
-            <div id="form-status">Thank you! Your message has been sent to Polish Heritage successfully. I will be in touch shortly.</div>
-            
+            <div id="form-status">Thank you! Your message has been sent successfully. I will be in touch shortly.</div>
         </div>
     </section>
 
@@ -229,8 +233,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="about-me.html">Contact</a>
         </div>
         <div class="footer-contact">
-            <p>USA: +1-845-587-0531 | ISRAEL: +972-(0)53-452-5303</p>
-            <p>Email: infopolishcitizenship@gmail.com</p>
+            <p>USA: <a href="tel:+18455870531">+1-845-587-0531</a> | ISRAEL: <a href="tel:+972534525303">+972-(0)53-452-5303</a></p>
+            <p>Email: <a href="mailto:infopolishcitizenship@gmail.com">infopolishcitizenship@gmail.com</a></p>
             <br>
             <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
         </div>
@@ -243,35 +247,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         async function handleSubmit(event) {
             event.preventDefault(); 
             var data = new FormData(event.target);
-            
             fetch(event.target.action, {
                 method: form.method,
                 body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
                     statusMessage.style.display = "block";
                     form.reset(); 
-                    
-                    setTimeout(function() {
-                        statusMessage.style.display = "none";
-                    }, 6000);
+                    setTimeout(function() { statusMessage.style.display = "none"; }, 6000);
                 } else {
                     statusMessage.style.display = "block";
                     statusMessage.style.backgroundColor = "#fef2f2";
                     statusMessage.style.color = "#991b1b";
                     statusMessage.style.border = "1px solid #fecaca";
-                    statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+                    statusMessage.innerHTML = "Oops! Problem submitting form.";
                 }
             }).catch(error => {
                 statusMessage.style.display = "block";
-                statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+                statusMessage.innerHTML = "Oops! Problem submitting form.";
             });
         }
         form.addEventListener("submit", handleSubmit);
     </script>
-
 </body>
 </html>
