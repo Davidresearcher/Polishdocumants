@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -17,26 +15,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="alternate icon" href="favicon.png">
     
     <link rel="canonical" href="https://heritagecitizenships.com/" />
-    <meta name="title" content="Polish Heritage | Abraham Neumann">
     <meta name="description" content="Expert Polish Jewish genealogy services. Assisting clients with ancestry proof, simplified naturalization, and document retrieval from Polish archives.">
     <meta name="google-site-verification" content="jnqUmHcDM8s6SzT7HUnA-4GEYJ32BYiCmdrCRcnuipc" />
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://heritagecitizenships.com/">
     <meta property="og:title" content="Polish Heritage | Abraham Neumann">
-    <meta property="og:description" content="Expert Polish Jewish genealogy services. Assisting clients with ancestry proof, simplified naturalization, and document retrieval from Polish archives.">
+    <meta property="og:description" content="Expert Polish Jewish genealogy services. Document retrieval from Polish archives.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80&w=1200">
-
-    <meta property="twitter:url" content="https://heritagecitizenships.com/">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Polish Heritage | Abraham Neumann">
-    <meta property="twitter:description" content="Expert Polish Jewish genealogy services. Assisting clients with ancestry proof, simplified naturalization, and document retrieval from Polish archives.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80&w=1200">
     
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Modern CSS Variables for Institutional Brand Consistency */
         :root {
             --navy: #0a192f;
             --navy-light: #112240;
@@ -51,18 +41,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             --card-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
         }
 
-        /* Base Reset and Typography Optimization */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-            /* Prevents the sticky header from covering section titles when clicked */
-            scroll-padding-top: 100px; 
-        }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 
         body {
             font-family: 'Source Sans Pro', sans-serif;
@@ -72,489 +53,161 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            font-family: 'Libre Baskerville', serif;
-            font-weight: 700;
-            color: var(--white);
-        }
+        h1, h2, h3 { font-family: 'Libre Baskerville', serif; font-weight: 700; color: var(--white); }
 
-        /* Glassmorphism Sticky Header Navigation */
+        /* Navigation */
         header {
-            position: sticky;
-            top: 0;
-            z-index: 2000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 4%; /* Adjusted padding */
-            background: var(--glass);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            position: sticky; top: 0; z-index: 2000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 4%; background: var(--glass);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(197, 160, 89, 0.2);
             transition: var(--transition-smooth);
         }
 
         .logo {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.6rem;
-            color: var(--gold);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            white-space: nowrap; /* THE FIX: Keeps the logo on one single line */
+            font-family: 'Libre Baskerville', serif; font-size: 1.6rem;
+            color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase;
+            white-space: nowrap;
         }
 
-        /* Hamburger Menu Icon (Hidden on Desktop) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 6px;
-            z-index: 2001;
-        }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; z-index: 2001; }
+        .hamburger span { width: 30px; height: 3px; background-color: var(--gold); border-radius: 2px; transition: var(--transition-smooth); }
 
-        .hamburger span {
-            width: 30px;
-            height: 3px;
-            background-color: var(--gold);
-            border-radius: 2px;
-            transition: var(--transition-smooth);
-        }
+        nav ul { display: flex; list-style: none; gap: 1.5rem; }
+        nav ul li a { text-decoration: none; color: var(--text-light); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition-smooth); }
+        nav ul li a:hover { color: var(--gold); }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem; /* THE FIX: Reduced gap so the longer menu items fit */
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-weight: 400;
-            font-size: 0.8rem; /* THE FIX: Slightly smaller font size to prevent squishing */
-            transition: var(--transition-smooth);
-            text-transform: uppercase;
-            letter-spacing: 1px; /* THE FIX: Tighter tracking to save horizontal space */
-        }
-
-        nav ul li a:hover {
-            color: var(--gold);
-        }
-
-        /* Dynamic Hero Section with Historical Overlay */
+        /* Hero */
         .hero {
-            position: relative;
-            min-height: 85vh; /* Changed to min-height so it can stretch */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 100px 15% 80px; /* Added thick padding to prevent it from sliding under the header */
+            position: relative; min-height: 85vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 100px 15% 80px;
             background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.8)), 
                         url('https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-size: cover; background-position: center; background-attachment: fixed;
         }
 
-        .hero h1 {
-            font-size: clamp(1.8rem, 4vw, 2.8rem); /* Scaled down the max font size slightly for laptops */
-            max-width: 1000px;
-            margin-bottom: 2.5rem;
-            line-height: 1.4; /* Gave the text a tiny bit more breathing room */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
-        }
+        .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); max-width: 1000px; margin-bottom: 2.5rem; line-height: 1.4; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 4px 15px rgba(0,0,0,0.6); }
 
-        /* Service Cards Architecture */
-        .services-section {
-            padding: 120px 10%;
-            background-color: var(--navy);
-        }
+        /* Services */
+        .services-section { padding: 120px 10%; background-color: var(--navy); }
+        .section-title { text-align: center; font-size: 2.8rem; margin-bottom: 5rem; color: var(--gold); }
+        .section-title span { display: block; font-size: 1.1rem; color: var(--text-muted); margin-top: 15px; text-transform: uppercase; letter-spacing: 6px; }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 5rem;
-            color: var(--gold);
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; max-width: 1400px; margin: 0 auto; }
+        .service-card { background: linear-gradient(145deg, var(--navy-light), #0a192f); padding: 3rem; border-radius: 8px; border: 1px solid rgba(197, 160, 89, 0.1); transition: var(--transition-smooth); display: flex; flex-direction: column; box-shadow: var(--card-shadow); position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--gold); transform: scaleX(0); transition: var(--transition-smooth); transform-origin: left; }
+        .service-card:hover { transform: translateY(-12px); border-color: rgba(197, 160, 89, 0.4); box-shadow: 0 25px 50px -15px rgba(2, 12, 27, 0.9); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-card h3 { color: var(--gold); font-size: 1.6rem; margin-bottom: 1.5rem; min-height: 4rem; }
+        .service-card p { color: var(--text-muted); margin-bottom: 2.5rem; flex-grow: 1; font-size: 1.05rem; }
 
-        .section-title span {
-            display: block;
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-top: 15px;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-        }
+        .btn { display: inline-block; padding: 1rem 2.2rem; background: transparent; color: var(--gold); border: 1px solid var(--gold); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 600; border-radius: 4px; transition: var(--transition-smooth); cursor: pointer; }
+        .btn:hover { background: rgba(197, 160, 89, 0.15); color: var(--gold-hover); border-color: var(--gold-hover); transform: scale(1.02); }
+        .hero .btn { background: var(--gold); color: var(--navy); border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        /* Testimonials */
+        .testimonial-section { padding: 120px 10%; background: linear-gradient(rgba(10, 25, 47, 0.88), rgba(10, 25, 47, 0.92)), url('https://images.unsplash.com/photo-1589133036854-3e9a4f48483a?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; background-attachment: fixed; text-align: center; }
+        .testimonial-box { max-width: 900px; margin: 0 auto; font-style: italic; font-size: 1.5rem; line-height: 1.9; color: var(--text-light); position: relative; }
+        .testimonial-author { margin-top: 3rem; font-style: normal; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 1rem; }
 
-        .service-card {
-            background: linear-gradient(145deg, var(--navy-light), #0a192f);
-            padding: 3rem;
-            border-radius: 8px;
-            border: 1px solid rgba(197, 160, 89, 0.1);
-            transition: var(--transition-smooth);
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--card-shadow);
-            position: relative;
-            overflow: hidden;
-        }
+        /* Story */
+        .story-section { padding: 120px 10%; background-color: var(--sepia-dark); }
+        .story-content { max-width: 850px; margin: 0 auto; text-align: center; }
+        .story-content p { margin-bottom: 2rem; font-size: 1.15rem; color: var(--text-muted); text-align: left; }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 4px;
-            background: var(--gold);
-            transform: scaleX(0);
-            transition: var(--transition-smooth);
-            transform-origin: left;
-        }
+        /* Footer */
+        footer { padding: 80px 10% 40px; background-color: var(--navy); text-align: center; border-top: 1px solid rgba(197, 160, 89, 0.1); }
+        .footer-contact p { color: var(--text-muted); margin-bottom: 0.8rem; font-size: 0.95rem; letter-spacing: 1px; }
+        .footer-contact a { color: var(--gold); font-weight: 600; text-decoration: none; transition: var(--transition-smooth); }
+        .footer-contact a:hover { color: var(--gold-hover); text-decoration: underline; }
+        .copyright { margin-top: 3rem; font-size: 0.8rem; color: rgba(136, 146, 176, 0.5); border-top: 1px solid rgba(197, 160, 89, 0.05); padding-top: 2rem; }
 
-        .service-card:hover {
-            transform: translateY(-12px);
-            border-color: rgba(197, 160, 89, 0.4);
-            box-shadow: 0 25px 50px -15px rgba(2, 12, 27, 0.9);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card h3 {
-            color: var(--gold);
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            min-height: 4rem;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            flex-grow: 1;
-            font-size: 1.05rem;
-        }
-
-        /* Button Architecture */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.2rem;
-            background: transparent;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border-radius: 4px;
-            transition: var(--transition-smooth);
-            align-self: flex-start;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: rgba(197, 160, 89, 0.15);
-            color: var(--gold-hover);
-            border-color: var(--gold-hover);
-            transform: scale(1.02);
-        }
-
-        .hero .btn {
-            background: var(--gold);
-            color: var(--navy);
-            border: none;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .hero .btn:hover {
-            background: var(--gold-hover);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-        }
-
-        /* Testimonial Section Architecture */
-        .testimonial-section {
-            padding: 120px 10%;
-            background: linear-gradient(rgba(10, 25, 47, 0.88), rgba(10, 25, 47, 0.92)), 
-                        url('https://images.unsplash.com/photo-1589133036854-3e9a4f48483a?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            text-align: center;
-        }
-
-        .testimonial-box {
-            max-width: 900px;
-            margin: 0 auto;
-            font-style: italic;
-            font-size: 1.5rem;
-            line-height: 1.9;
-            color: var(--text-light);
-            position: relative;
-        }
-
-        .testimonial-box::before {
-            content: '"';
-            position: absolute;
-            top: -40px; left: 50%;
-            transform: translateX(-50%);
-            font-size: 5rem;
-            color: rgba(197, 160, 89, 0.3);
-            font-family: serif;
-        }
-
-        .testimonial-author {
-            margin-top: 3rem;            
-            font-style: normal;
-            color: var(--gold);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 1rem;
-        }
-
-        /* Story Section with Archival Depth */
-        .story-section {
-            padding: 120px 10%;
-            background-color: var(--sepia-dark);
-        }
-
-        .story-content {
-            max-width: 850px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .story-content p {
-            margin-bottom: 2rem;
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            text-align: left;
-        }
-
-        /* CTA Engagement Section */
-        .cta-section {
-            padding: 100px 10%;
-            background: var(--navy-light);
-            text-align: center;
-            border-top: 1px solid rgba(197, 160, 89, 0.15);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--gold);
-        }
-
-        .cta-section p {
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            color: var(--text-muted);
-            font-size: 1.2rem;
-        }
-
-        /* Footer Infrastructure */
-        footer {
-            padding: 80px 10% 40px;
-            background-color: var(--navy);
-            text-align: center;
-            border-top: 1px solid rgba(197, 160, 89, 0.1);
-        }
-
-        .footer-contact p {
-            color: var(--text-muted);
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-        }
-
-        .copyright {
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            color: rgba(136, 146, 176, 0.5);
-            border-top: 1px solid rgba(197, 160, 89, 0.05);
-            padding-top: 2rem;
-        }
-
-        /* Responsive Mobile Architecture */
-        @media (max-width: 992px) {
-            header { padding: 1.5rem 5%; }
-            .hero { padding: 0 5%; }
-            .section-title { font-size: 2.2rem; }
-            nav ul { gap: 1.2rem; }
-        }
-
-        /* MOBILE MENU MAGIC HAPPENS HERE */
         @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--navy);
-                border-top: 1px solid rgba(197, 160, 89, 0.2);
-                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-                transform: translateY(-150%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition-smooth);
-                z-index: 1999;
-            }
-
-            nav.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            nav ul { 
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem 0;
-                gap: 2rem;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: translateY(9px) rotate(45deg);
-            }
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.active span:nth-child(3) {
-                transform: translateY(-9px) rotate(-45deg);
-            }
-
-            .hero h1 { font-size: 1.8rem; }
-            .services-grid { grid-template-columns: 1fr; }
-            .testimonial-box { font-size: 1.2rem; }
+            .hamburger { display: flex; }
+            nav { position: absolute; top: 100%; left: 0; width: 100%; background: var(--navy); transform: translateY(-150%); opacity: 0; visibility: hidden; transition: var(--transition-smooth); }
+            nav.active { transform: translateY(0); opacity: 1; visibility: visible; }
+            nav ul { flex-direction: column; align-items: center; padding: 2rem 0; gap: 2rem; }
+            .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
         }
     </style>
 </head>
 <body>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7LXB4ZV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <div class="logo">Polish Heritage</div>
-        
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         <nav id="nav-menu">
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="how-we-work.html">How We Work</a></li>
                 <li><a href="#services">Our Services</a></li>
-                <li><a href="citizenship.html">Polish Citizenship Laws</a></li>
+                <li><a href="Retrieve-Archives-Poland.html">Retrieval</a></li>
+                <li><a href="citizenship.html">Polish Laws</a></li>
                 <li><a href="about-me.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>STANDING NEXT TO YOU ON YOUR POLISH CITIZENSHIP JOURNEY AND HELPING YOU TO DISCOVER YOUR ROOTS</h1>
+        <h1>Standing next to you on your Polish citizenship journey and helping you discover your roots</h1>
         <a href="citizenship.html" class="btn">Read More</a>
     </section>
 
     <section id="services" class="services-section">
         <h2 class="section-title">SERVICES <span>Polish Citizenship – Document Retrieval – Jewish Genealogy</span></h2>
-        
         <div class="services-grid">
-            
             <div class="service-card">
                 <h3>Citizenship Verification</h3>
-                <p>Are you a Polish citizen by descent? I possess years of specialized experience helping the global diaspora legally confirm their status with Polish authorities. By meticulously analyzing your family history against the 1920 and 1951 nationality laws, we will bypass bureaucratic delays and secure your European passport together.</p>
+                <p>Are you a Polish citizen by descent? I possess specialized experience helping the diaspora legally confirm their status. We meticulously analyze history against the 1920 and 1951 laws to bypass bureaucratic delays.</p>
                 <a href="verification.html" class="btn">Read More</a>
             </div>
-
             <div class="service-card">
                 <h3>Genealogy for Ancestry Proof</h3>
-                <p>I am Abraham Neumann, a professional Polish Jewish genealogist with a background in law, residing both in Poland and in Israel. Specializing in Polish Jewish Genealogy, I assist clients who may have limited knowledge about their Polish ancestry. I specialize in proving citizenship in challenging cases where others have given up.</p>
+                <p>I assist clients who may have limited knowledge about their ancestry. I specialize in proving citizenship in challenging cases where others have given up, bridging gaps with forensic precision.</p>
                 <a href="genealogy.html" class="btn">Read More</a>
             </div>
-            
-            <div class="service-card">
-                <h3>How to Prove Jewish Ancestry</h3>
-                <p>Did your Jewish ancestors lose or renounce their Polish citizenship upon emigrating? I specialize in locating the exact archival documents necessary to prove your Jewish ancestry, allowing you to reclaim your European passport through Simplified Naturalization.</p>
-                <a href="prove-jewish-ancestry.html" class="btn">Read More</a>
-            </div>
-
             <div class="service-card">
                 <h3>Polish Document Retrieval</h3>
-                <p>Do you just want to retrieve documents from the Polish archives fast and conveniently? I physically locate and retrieve historical, genealogical, and legal records directly from local Polish registry offices (USC) and state archives.</p>
+                <p>Retrieve documents from Polish archives fast and conveniently. I physically locate and retrieve historical, genealogical, and legal records directly from local offices and state archives.</p>
                 <a href="Retrieve-Archives-Poland.html" class="btn">Read More</a>
             </div>
-
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>Need Advice?</h2>
-        <p>Do you have Polish ancestry? Are you interested in having a European passport? Do you need help finding proof of your ancestry, or retrieving documents from Poland?</p>
-        <a href="about-me.html" class="btn">Contact Me</a>
-    </section>
-
-    <section class="testimonial-section">
-        <h2 class="section-title" style="color: white; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px;">Testimonials</h2>
-        <div class="testimonial-box">
-            "Abraham is a brilliant, dedicated genealogist! He did tremendously deep dives into antiquated texts to find out about my ancestry. He has access to resources which I can’t access, and speaks many languages I don’t – both of which make him successful. I highly recommend him!"
-            <div class="testimonial-author">- Jack Domb, Attorney</div>
         </div>
     </section>
 
     <section id="about" class="story-section">
         <h2 class="section-title">My Story</h2>
         <div class="story-content">
-            <p>I am a Polish Jewish genealogist living in Israel. Since 2023 I have been doing heir and probate research, finding vital records for citizenship purposes and making family trees for individuals with Polish and Polish Jewish ancestry.</p>
-            <p>I am a polyglot speaking several languages. I speak fluent Polish, English, Yiddish, and Hebrew, and a little bit of Russian, a skill which helps me navigate through historical documents and legal texts.</p>
+            <p>I am a Polish Jewish genealogist living in Israel. Since 2023, I have been performing heir and probate research, finding vital records for citizenship purposes, and creating family trees for individuals with Polish ancestry.</p>
+            <p>As a polyglot speaking Polish, English, Yiddish, and Hebrew, I navigate through historical documents and legal texts that are inaccessible to most researchers.</p>
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="#contact" class="btn">Read More</a>
+                <a href="about-me.html" class="btn">Learn More</a>
             </div>
         </div>
     </section>
 
     <footer id="contact">
         <div class="footer-contact">
-<p>        
-    USA: <a href="tel:+18455870531" style="color: var(--accent-gold); font-weight: 600;">+1-845-587-0531</a> | 
-    ISRAEL: <a href="tel:+972534525303" style="color: var(--accent-gold); font-weight: 600;">+972-(0)53-452-5303</a>
-</p>
-<p>
-    Email: <a href="mailto:infopolishcitizenship@gmail.com" style="color: var(--accent-gold); font-weight: 600;">infopolishcitizenship@gmail.com</a>
-</p>
+            <p>USA: <a href="tel:+18455870531">+1-845-587-0531</a> | ISRAEL: <a href="tel:+972534525303">+972-(0)53-452-5303</a></p>
+            <p>Email: <a href="mailto:infopolishcitizenship@gmail.com">infopolishcitizenship@gmail.com</a></p>
             <div class="copyright">
-                <p id="copyright-text">&copy; 2024 Polish Heritage | Abraham Neumann. All rights reserved.</p>
+                <p id="copyright-text">&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Grab the elements from the DOM
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
-        // Toggle the menu when clicking the hamburger icon
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Close the menu automatically when a user clicks a link
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -562,7 +215,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             });
         });
 
-        // Automatically update the copyright year
         document.getElementById('copyright-text').innerHTML = `&copy; ${new Date().getFullYear()} Polish Heritage | Abraham Neumann. All rights reserved.`;
     </script>
 </body>
