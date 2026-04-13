@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About / Contact | Polish Heritage</title>
@@ -46,6 +44,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; }
@@ -86,17 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* SUCCESS POPUP STYLING */
         #form-status {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0fdf4;
-            color: #166534;
-            border: 1px solid #bbf7d0;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 15px;
-            animation: fadeIn 0.5s;
+            display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 15px; animation: fadeIn 0.5s;
         }
         
         @keyframes fadeIn {
@@ -107,7 +98,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         /* FOOTER */
         footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; font-size: 14px; }
         .footer-contact p { margin: 10px 0; }
-        .footer-contact span { color: var(--accent-gold); font-weight: 600; }
+        .footer-contact a { color: var(--accent-gold); font-weight: 600; }
+        .footer-contact a:hover { text-decoration: underline; }
 
         /* RESPONSIVE */
         @media(max-width: 768px) {
@@ -118,15 +110,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </head>
 <body>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7LXB4ZV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <div class="logo">Polish Heritage</div>
         <nav>
             <ul>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#citizenship">Polish Citizenship</a></li>
-                <li><a href="index.html#services">Polish Citizenship Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="citizenship.html">Polish Citizenship</a></li>
+                <li><a href="Retrieve-Archives-Poland.html">Document Retrieval</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about-me.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -139,7 +133,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 <div class="input-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Dale" required>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
                 
                 <div class="input-group">
@@ -162,8 +156,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <footer>
         <div class="footer-contact">
-            <p>USA: +1-845-587-0531 | ISRAEL: +972-(0)53-452-5303</p>
-            <p>Email: infopolishcitizenship@gmail.com</p>
+            <p>USA: <a href="tel:+18455870531">+1-845-587-0531</a> | ISRAEL: <a href="tel:+972534525303">+972-(0)53-452-5303</a></p>
+            <p>Email: <a href="mailto:infopolishcitizenship@gmail.com">infopolishcitizenship@gmail.com</a></p>
             <br>
             <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
         </div>
@@ -185,11 +179,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 }
             }).then(response => {
                 if (response.ok) {
-                    // Shows the thank you popup
                     statusMessage.style.display = "block";
                     form.reset(); // Clears the form fields
                     
-                    // Makes the popup disappear after 6 seconds
                     setTimeout(function() {
                         statusMessage.style.display = "none";
                     }, 6000);
