@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ALL PREMIUM STYLES EMBEDDED DIRECTLY */
         :root {
             --primary-navy: #0A192F; 
             --secondary-navy: #112240;
@@ -40,7 +39,6 @@
         h1, h2, h3, h4, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
         a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 
-        /* HEADER & NAVIGATION */
         header {
             background-color: var(--primary-navy);
             padding: 25px 60px;
@@ -59,7 +57,6 @@
         nav ul li a { color: var(--white); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
         nav ul li a:hover { color: var(--accent-gold); }
 
-        /* HERO HEADER */
         .page-header {
             background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
             color: var(--white);
@@ -70,65 +67,15 @@
         .page-header h1 { font-size: 46px; margin-bottom: 20px; color: var(--accent-gold); letter-spacing: 1px; }
         .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; color: #E2E8F0; line-height: 2; }
 
-        /* EDITORIAL SECTION */
-        .editorial-container {
-            max-width: 1000px;
-            margin: 60px auto;
-            background: var(--white);
-            padding: 60px 80px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-radius: 4px;
-        }
+        .editorial-container { max-width: 1000px; margin: 60px auto; background: var(--white); padding: 60px 80px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-radius: 4px; }
+        .editorial-header { text-align: center; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid var(--border-color); }
+        .editorial-header h2 { font-size: 36px; color: var(--primary-navy); margin-bottom: 15px; line-height: 1.3; }
+        .editorial-header .subtitle { font-size: 14px; text-transform: uppercase; letter-spacing: 3px; color: var(--accent-gold); font-weight: 700; }
 
-        .editorial-header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--border-color);
-        }
+        .editorial-content h3 { font-size: 24px; color: var(--primary-navy); margin: 50px 0 20px 0; padding-bottom: 10px; border-bottom: 2px solid var(--accent-gold); display: inline-block; }
+        .editorial-content p { margin-bottom: 25px; font-size: 17px; color: var(--text-muted); text-align: justify; }
 
-        .editorial-header h2 {
-            font-size: 36px;
-            color: var(--primary-navy);
-            margin-bottom: 15px;
-            line-height: 1.3;
-        }
-
-        .editorial-header .subtitle {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-gold);
-            font-weight: 700;
-        }
-
-        .editorial-content h3 {
-            font-size: 24px;
-            color: var(--primary-navy);
-            margin: 50px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-gold);
-            display: inline-block;
-        }
-
-        .editorial-content p {
-            margin-bottom: 25px;
-            font-size: 17px;
-            color: var(--text-muted);
-            text-align: justify;
-        }
-
-        .drop-cap::first-letter {
-            float: left;
-            font-family: 'Cinzel', serif;
-            font-size: 75px;
-            line-height: 60px;
-            padding-top: 4px;
-            padding-right: 12px;
-            padding-left: 3px;
-            color: var(--accent-gold);
-            font-weight: 700;
-        }
+        .drop-cap::first-letter { float: left; font-family: 'Cinzel', serif; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 12px; padding-left: 3px; color: var(--accent-gold); font-weight: 700; }
 
         .table-wrapper { margin: 40px 0; overflow-x: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .legal-table { width: 100%; border-collapse: collapse; background: var(--white); font-size: 15px; }
@@ -136,39 +83,31 @@
         .legal-table td { padding: 15px 20px; border-bottom: 1px solid var(--border-color); color: var(--text-dark); vertical-align: top; }
         .legal-table tr:nth-child(even) td { background-color: #F8FAFC; }
 
-        .process-flow { display: flex; align-items: center; justify-content: space-between; background: var(--primary-navy); padding: 30px; border-radius: 8px; margin: 40px 0; flex-wrap: wrap; gap: 15px; }
-        .process-step { background: var(--white); color: var(--primary-navy); padding: 15px 20px; border-radius: 4px; font-weight: 700; font-size: 14px; text-align: center; flex: 1; min-width: 150px; border-bottom: 4px solid var(--accent-gold); }
-        .process-arrow { color: var(--accent-gold); font-size: 24px; font-weight: bold; }
-
         .insight-box { background-color: #F0F4F8; padding: 30px; border-left: 6px solid var(--accent-gold); margin: 40px 0; font-style: italic; color: var(--secondary-navy); }
 
-        /* FAQ STYLES */
         .faq-section { padding: 40px 5%; max-width: 1000px; margin: 0 auto; }
-        .faq-title { text-align: center; margin-bottom: 40px; color: var(--primary-navy); font-size: 32px; }
+        .faq-title { text-align: center; margin-bottom: 40px; color: var(--primary-navy); font-size: 32px; font-family: 'Cinzel', serif; }
         .accordion-container { background: var(--white); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-gold); overflow: hidden; }
         .accordion-item { border-bottom: 1px solid #E2E8F0; }
         .accordion-header { width: 100%; padding: 25px 30px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; }
-        .accordion-header h3 { font-size: 16px; color: var(--primary-navy); font-weight: 600; }
+        .accordion-header h3 { font-size: 16px; color: var(--primary-navy); font-weight: 600; font-family: 'Montserrat', sans-serif; margin: 0;}
         .accordion-header .icon { color: var(--accent-gold); font-size: 24px; font-weight: bold; }
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F8FAFC; padding: 0 30px; }
         .accordion-body { padding-bottom: 25px; }
         .faq-label { color: var(--accent-gold); text-transform: uppercase; font-size: 12px; letter-spacing: 1px; font-weight: bold; display: block; margin-top: 15px; margin-bottom: 5px; }
 
-        /* CONTACT FORM SECTION */
         .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; border-top: 5px solid var(--accent-gold); }
         .contact-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 10px; }
-        .contact-section > p { margin-bottom: 40px; font-size: 16px; color: var(--text-light); }
         .contact-container { max-width: 700px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); position: relative; }
         .contact-form { display: flex; flex-direction: column; gap: 25px; }
         .input-group { display: flex; flex-direction: column; text-align: left; }
-        .input-group label { font-size: 13px; color: var(--primary-navy); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .input-group label { font-size: 13px; color: var(--primary-navy); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; }
         .input-group input, .input-group textarea { padding: 16px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-size: 15px; outline: none; background-color: #F8FAFC; color: var(--text-dark); }
-        .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-gold); background-color: var(--white); }
         .btn { display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease; }
         .btn:hover { background-color: #F3C94F; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
         .submit-btn { width: 100%; margin-top: 10px; padding: 18px; font-size: 16px; }
 
-        #form-status { display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 15px; }
+        #form-status { display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; }
 
         footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; font-size: 14px; }
         .footer-nav { margin-bottom: 30px; }
@@ -176,7 +115,7 @@
         .footer-contact p { margin: 10px 0; }
         .footer-contact a { color: var(--accent-gold); font-weight: 600; }
 
-        @media(max-width: 900px) { .editorial-container { padding: 40px 30px; margin: 30px 15px; } header { flex-direction: column; padding: 20px; } nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; } .process-arrow { display: none; } }
+        @media(max-width: 900px) { .editorial-container { padding: 40px 30px; margin: 30px 15px; } header { flex-direction: column; padding: 20px; } nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; } }
     </style>
 </head>
 <body>
@@ -188,6 +127,7 @@
             <ul>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="citizenship.html">Polish Citizenship</a></li>
+                <li><a href="Retrieve-Archives-Poland.html">Document Retrieval</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="about-me.html">Contact</a></li>
             </ul>
@@ -234,146 +174,4 @@
     </article>
 
     <section class="faq-section">
-        <h2 class="faq-title">Jurisprudential FAQ</h2>
-        <div class="accordion-container">
-            
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <h3>1. Does serving in the IDF or US Army mean I lost my right to Polish citizenship?</h3>
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-body">
-                        <span class="faq-label">Executive Summary:</span>
-                        <p>Military service prior to Jan 19, 1951, resulted in loss, unless it was Allied service in WWII. Post-1951 service has zero impact.</p>
-                        <span class="faq-label">Legal Framework:</span>
-                        <p>Article 11 of the 1920 Act. The 'Military Paradox' often protects men still subject to the Polish draft.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <h3>6. My parents were forced out of Poland in 1968. Can I reclaim citizenship?</h3>
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-body">
-                        <span class="faq-label">Executive Summary:</span>
-                        <p>Yes. 1968 expulsions are now recognized as illegal. You are likely still a citizen by blood.</p>
-                        <span class="faq-label">Archival Solution:</span>
-                        <p>We recover original "one-way" travel documents from the IPN archives to prove ancestry status.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <h3>11. Do I have to move to Poland or pay taxes there?</h3>
-                    <span class="icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-body">
-                        <span class="faq-label">Executive Summary:</span>
-                        <p>No. Residency is not required. Taxes are based on your 'center of vital interests', not your passport.</p>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-    </section>
-
-    <section class="contact-section">
-        <h2>Ready for VIP Service?</h2>
-        <p>Let's fast-track your citizenship application with expert precision.</p>
-        <div class="contact-container">
-            <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
-                <div class="input-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your case..." required></textarea>
-                </div>
-                <button type="submit" class="btn submit-btn">Request VIP Processing</button>
-            </form>
-            <div id="form-status">Message sent successfully.</div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-nav">
-            <a href="index.html#about">About</a>
-            <a href="citizenship.html">Polish Citizenship</a>
-            <a href="index.html#services">Services</a>
-            <a href="about-me.html">Contact</a>
-        </div>
-        <div class="footer-contact">
-            <p>USA: <a href="tel:+18455870531">+1-845-587-0531</a> | ISRAEL: <a href="tel:+972534525303">+972-(0)53-452-5303</a></p>
-            <p>Email: <a href="mailto:infopolishcitizenship@gmail.com">infopolishcitizenship@gmail.com</a></p>
-            <br>
-            <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Accordion Logic
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('.icon');
-                button.classList.toggle('active');
-                if (button.classList.contains('active')) {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    icon.textContent = '-';
-                } else {
-                    content.style.maxHeight = "0";
-                    icon.textContent = '+';
-                }
-            });
-        });
-
-        // Form Logic
-        var form = document.getElementById("my-form");
-        var statusMessage = document.getElementById("form-status");
-        async function handleSubmit(event) {
-            event.preventDefault(); 
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    statusMessage.style.display = "block";
-                    form.reset();
-                    setTimeout(() => { statusMessage.style.display = "none"; }, 6000);
-                }
-            });
-        }
-        form.addEventListener("submit", handleSubmit);
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does serving in the IDF or US Army mean I lost my right to Polish citizenship?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Military service in a foreign army prior to January 19, 1951, generally resulted in the automatic loss of Polish citizenship, unless the service occurred within Allied forces during WWII."
-          }
-        }
-      ]
-    }
-    </script>
-</body>
-</html>
+        <h2
