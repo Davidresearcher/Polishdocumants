@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polish Citizenship Laws | Polish Heritage</title>
+    <title>VIP Citizenship Verification | Polish Heritage</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* ALL PREMIUM STYLES EMBEDDED DIRECTLY */
         :root {
             --primary-navy: #0A192F; 
+            --secondary-navy: #112240;
             --accent-gold: #D4AF37; 
-            --light-bg: #F4F7F6;
+            --light-bg: #F8FAFC;
             --white: #FFFFFF;
-            --text-dark: #2D3748;
+            --text-dark: #1A202C;
+            --text-muted: #4A5568;
             --text-light: #A0AEC0;
+            --border-color: #E2E8F0;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        
         body {
             font-family: 'Montserrat', sans-serif;
             color: var(--text-dark);
             line-height: 1.8;
             background-color: var(--light-bg);
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
+        h1, h2, h3, h4, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
         a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 
         /* HEADER & NAVIGATION */
@@ -38,60 +42,175 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; }
-
+        
         nav ul { list-style: none; display: flex; gap: 35px; }
         nav ul li a { color: var(--white); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
         nav ul li a:hover { color: var(--accent-gold); }
 
-        /* PAGE HEADER */
+        /* HERO HEADER */
         .page-header {
-            background-color: var(--primary-navy);
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
             color: var(--white);
             text-align: center;
-            padding: 80px 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 100px 20px;
+            border-bottom: 5px solid var(--accent-gold);
         }
-        .page-header h1 { font-size: 42px; margin-bottom: 15px; color: var(--accent-gold); }
-        .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; }
+        .page-header h1 { font-size: 46px; margin-bottom: 20px; color: var(--accent-gold); letter-spacing: 1px; }
+        .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; color: #E2E8F0; line-height: 2; }
 
-        /* CONTENT SECTION */
-        .content-section {
-            padding: 80px 5%;
+        /* EDITORIAL LONG-FORM SECTION (THE REPORT) */
+        .editorial-container {
             max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .content-block {
+            margin: 60px auto;
             background: var(--white);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-            border-left: 5px solid var(--accent-gold);
+            padding: 60px 80px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-radius: 4px;
         }
 
-        .content-block h2 { color: var(--primary-navy); margin-bottom: 25px; font-size: 28px; }
-        .content-block p { margin-bottom: 20px; font-size: 16px; color: #4A5568; }
-        .content-block ul { margin-left: 25px; margin-bottom: 25px; color: #4A5568; }
-        .content-block ul li { margin-bottom: 10px; }
-        .content-block ul li strong { color: var(--primary-navy); }
+        .editorial-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-        .highlight-box {
-            background-color: #F8FAFC;
-            padding: 25px;
+        .editorial-header h2 {
+            font-size: 36px;
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .editorial-header .subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .editorial-content h3 {
+            font-size: 24px;
+            color: var(--primary-navy);
+            margin: 50px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+        }
+
+        .editorial-content p {
+            margin-bottom: 25px;
+            font-size: 17px;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        /* Drop Cap for the first paragraph */
+        .drop-cap::first-letter {
+            float: left;
+            font-family: 'Cinzel', serif;
+            font-size: 75px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 12px;
+            padding-left: 3px;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* LEGAL TABLES UI */
+        .table-wrapper {
+            margin: 40px 0;
+            overflow-x: auto;
             border-radius: 8px;
-            border: 1px solid #E2E8F0;
-            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        /* NEW CONTACT FORM SECTION SPECIFIC STYLES */
-        .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; }
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            font-size: 15px;
+        }
+
+        .legal-table th {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            text-align: left;
+            padding: 18px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .legal-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+            vertical-align: top;
+        }
+
+        .legal-table tr:nth-child(even) td { background-color: #F8FAFC; }
+        .legal-table tr:hover td { background-color: #F1F5F9; }
+
+        /* PROCESS FLOW UI (Replaces the text formula) */
+        .process-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--primary-navy);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .process-step {
+            background: var(--white);
+            color: var(--primary-navy);
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            border-bottom: 4px solid var(--accent-gold);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .process-arrow {
+            color: var(--accent-gold);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* HIGHLIGHT BOXES */
+        .insight-box {
+            background-color: #F0F4F8;
+            padding: 30px;
+            border-left: 6px solid var(--accent-gold);
+            margin: 40px 0;
+            font-style: italic;
+            color: var(--secondary-navy);
+        }
+
+        /* CONTACT FORM SECTION */
+        .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; border-top: 5px solid var(--accent-gold); }
         .contact-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 10px; }
         .contact-section > p { margin-bottom: 40px; font-size: 16px; color: var(--text-light); }
+        
         .contact-container {
             max-width: 700px;
             margin: 0 auto;
@@ -99,7 +218,6 @@
             padding: 50px;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            border-top: 5px solid var(--accent-gold);
             position: relative;
         }
         .contact-form { display: flex; flex-direction: column; gap: 25px; }
@@ -111,28 +229,14 @@
         .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-gold); background-color: var(--white); }
         
         .btn {
-            display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease;
+            display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease;
         }
         .btn:hover { background-color: #F3C94F; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
         .submit-btn { width: 100%; margin-top: 10px; padding: 18px; font-size: 16px; }
 
         /* SUCCESS POPUP STYLING */
         #form-status {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0fdf4;
-            color: #166534;
-            border: 1px solid #bbf7d0;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 15px;
-            animation: fadeIn 0.5s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+            display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 15px;
         }
 
         /* FOOTER */
@@ -144,10 +248,11 @@
         .footer-contact span { color: var(--accent-gold); font-weight: 600; }
 
         /* RESPONSIVE */
-        @media(max-width: 768px) {
+        @media(max-width: 900px) {
+            .editorial-container { padding: 40px 30px; margin: 30px 15px; }
             header { flex-direction: column; padding: 20px; }
             nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .content-block, .contact-container { padding: 30px 20px; }
+            .process-arrow { display: none; } /* Stack process flow nicely on mobile */
         }
     </style>
 </head>
@@ -160,71 +265,235 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="citizenship.html">Polish Citizenship</a></li>
                 <li><a href="index.html#services">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-me.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="page-header">
-        <h1>Polish Citizenship Laws</h1>
-        <p>Understanding the rules of Jus Sanguinis and your eligibility for a European passport.</p>
+        <h1>VIP Citizenship Verification</h1>
+        <p>Expert Jurisprudence, Archival Methodology, and Digital Optimization for the Jewish Diaspora.</p>
     </div>
 
-    <section class="content-section">
+    <article class="editorial-container">
         
-        <div class="content-block">
-            <h2>The Principle of Jus Sanguinis</h2>
-            <p>Polish citizenship law is based almost entirely on the principle of <em>jus sanguinis</em> (right of blood). This means that you inherit your Polish citizenship from your parents, regardless of where in the world you were born.</p>
-            <p>If you have Polish ancestry, you may already be a Polish citizen by law. To claim your passport, you do not need to "apply" for citizenship; rather, you must undergo a process called <strong>Confirmation of Polish Citizenship</strong>. This requires proving that your ancestor was a Polish citizen and that the line of citizenship was never broken.</p>
+        <div class="editorial-header">
+            <span class="subtitle">Comprehensive Strategic Framework</span>
+            <h2>Confirmation of Polish Citizenship by Descent</h2>
         </div>
 
-        <div class="content-block">
-            <h2>The Unbroken Line: Rules & Exceptions</h2>
-            <p>Because citizenship laws do not have a retroactive effect, the legal provisions in force at the time of your ancestors' life events (birth, marriage, military service, emigration) must be examined. The two most critical pieces of legislation are the Acts of <strong>1920</strong> and <strong>1951</strong>.</p>
-            
-            <div class="highlight-box">
-                <p><strong>To be eligible, you must prove that:</strong></p>
-                <ul>
-                    <li>Your ancestor resided in Poland (or held Polish citizenship) after the state was founded in 1918.</li>
-                    <li>They did not lose their citizenship before the next generation was born.</li>
-                </ul>
+        <div class="editorial-content">
+            <p class="drop-cap">The acquisition of Polish citizenship by descent is an intricate legal process governed by the foundational principle of <em>jus sanguinis</em>, ensuring that the right of blood transcends geographic boundaries and the passage of time. For the global Jewish diaspora, particularly those whose ancestors emigrated during the tumultuous decades of the 20th century, the process is not one of naturalization but rather a formal confirmation of a pre-existing legal status.</p>
+            <p>This procedure, legally designated as the confirmation of possession or loss of Polish citizenship, requires an exhaustive reconstruction of family lineage and a rigorous analysis of the shifting legislative landscape from 1920 to the present day. The pursuit of a Polish passport represents more than the acquisition of a travel document; it is a restoration of a historical link to a nation-state that serves as a gateway to the European Union and its attendant rights of residence, labor, and education.</p>
+
+            <h3>Historical Evolution of Polish Nationality Law</h3>
+            <p>The legal architecture of Polish citizenship was born from the re-emergence of the sovereign Polish state following the First World War. Prior to 1918, individuals residing in Polish territories held the citizenship of the partitioning powers—Prussia, Austria-Hungary, or the Russian Empire. The modern legal framework commenced with the Citizenship Act of January 20, 1920, which served as the first consolidated statute for the Second Polish Republic. Understanding the specific provisions of this Act is essential for any descendant, as it established the baseline for how citizenship was acquired, transmitted, and, critically, how it could be inadvertently lost.</p>
+
+            <div class="table-wrapper">
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Statute</th>
+                            <th>Commencement Date</th>
+                            <th>Transmission Logic</th>
+                            <th>Dual Citizenship Stance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Act of 1920</strong></td>
+                            <td>January 31, 1920</td>
+                            <td>Patrilineal priority for married couples; matrilineal for births out of wedlock.</td>
+                            <td>Generally prohibited; foreign naturalization led to automatic loss.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Act of 1951</strong></td>
+                            <td>January 19, 1951</td>
+                            <td>Equal transmission from either parent; relaxation of "unity of family" doctrine.</td>
+                            <td>Tolerated under specific state-sanctioned conditions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Act of 1962</strong></td>
+                            <td>August 22, 1962</td>
+                            <td>Continuation of bilateral transmission; emphasis on state registration.</td>
+                            <td>Recognized as "effective nationality" within Polish borders.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Act of 2009</strong></td>
+                            <td>August 15, 2012</td>
+                            <td>Full modern framework; clear procedures for "confirmation."</td>
+                            <td>Fully permitted; no penalties for multiple citizenships.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <p><strong>Common Ways Citizenship Was Lost (The "Broken Line"):</strong></p>
-            <ul>
-                <li><strong>Foreign Military Service (Pre-1951):</strong> Under the 1920 Act, a Polish citizen who enlisted in a foreign army or took a public office in a foreign country lost their Polish citizenship. <em>(Note: There is a famous "Military Paradox" exception for men who were of draft age in Poland, which we can investigate for you).</em></li>
-                <li><strong>Marriage to a Foreigner (Women, Pre-1951):</strong> Before 1951, a Polish woman who married a foreign citizen automatically lost her Polish citizenship and acquired her husband's nationality. Therefore, she could not pass Polish citizenship to children born after that marriage.</li>
-                <li><strong>Acquiring Foreign Citizenship (Pre-1951):</strong> Becoming a naturalized citizen of another country often resulted in the loss of Polish citizenship, depending on the treaties in place at the time.</li>
-            </ul>
-            <p>After 1951, the laws changed significantly to protect Polish citizenship, making it much harder to lose accidentally.</p>
-        </div>
+            <p>The Act of 1920 was characterized by a restrictive approach toward dual nationality, often referred to as the "principle of exclusivity." Article 1 explicitly stated that a Polish citizen could not simultaneously be a citizen of another state. This exclusivity meant that the act of acquiring foreign citizenship—such as naturalizing in the United States, Argentina, or the British Mandate of Palestine—typically resulted in the automatic loss of Polish citizenship for the individual.</p>
+            <p>The subsequent Act of 1951 represented a dramatic shift in Polish legal philosophy, influenced by the socialist restructuring of the state and the need to address the massive displacements caused by World War II. This Act abolished many of the patriarchal restrictions of the 1920 law, allowing children to inherit citizenship from their mothers regardless of the father's status.</p>
 
-        <div class="content-block">
-            <h2>Spouses of Polish Citizens</h2>
-            <p>Unlike some other European countries, Poland does not grant citizenship to spouses simply based on marriage and language skills while living abroad. To acquire Polish citizenship through marriage, the spouse must:</p>
-            <ul>
-                <li>Be married to a Polish citizen for at least 3 years.</li>
-                <li>Hold a permanent residence permit in Poland.</li>
-                <li>Live continuously in Poland for at least 2 years under that permit.</li>
-                <li>Pass a B1 level Polish language exam.</li>
-            </ul>
-        </div>
+            <h3>The Military Paradox and Disqualification Nuances</h3>
+            <p>One of the most complex aspects of Polish nationality law is the "Military Paradox," derived from Article 11 of the 1920 Act. This provision created a unique protection for male citizens. It stipulated that individuals obliged to perform active military service could only acquire foreign nationality after obtaining an exemption from the Polish Ministry of Military Affairs. Without such permission, the acquisition of a foreign passport was not recognized by the Polish state, and the individual remained a Polish citizen in the eyes of the law.</p>
+            <p>Conversely, the 1920 Act was unforgiving regarding actual service in a foreign military. Article 11, point 2, mandated the loss of citizenship for any Pole who entered military service in a foreign country without the consent of the competent Polish authorities. Service in the Israel Defense Forces (IDF) prior to January 19, 1951, is considered a definitive disqualifying event. However, service in the Allied forces during World War II—such as the American, British, or Soviet militaries—is an established exception and did not result in the loss of citizenship.</p>
 
-        <div class="content-block">
-            <h2>How I Can Help You</h2>
-            <p>Proving an unbroken line of citizenship requires a deep dive into historical archives, passenger manifests, military draft cards, and vital records. Since 2023, I have been assisting clients by:</p>
-            <ul>
-                <li><strong>Conducting Genealogical Research:</strong> Locating the vital records required to prove your Polish heritage.</li>
-                <li><strong>Retrieving Documents:</strong> Working directly with Polish State Archives and municipal offices to source official copies.</li>
-                <li><strong>Navigating the Law:</strong> Analyzing your family tree against the 1920 and 1951 Acts to ensure your line of citizenship is intact.</li>
-            </ul>
-        </div>
+            <h3>The Paradox of 1951: Gender and Transmission</h3>
+            <p>The treatment of women under the 1920 Act created what is now known among legal practitioners as the "Paradox of 1951." For three decades, the Polish state maintained a patriarchal transmission model for married couples. A child born to a married Polish mother and a foreign father between 1920 and 1951 did not inherit Polish citizenship; instead, they followed the father’s nationality. This changed only with the enactment of the 1951 law, which introduced bilateral transmission.</p>
 
-    </section>
+            <div class="table-wrapper">
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Loss Factor (Pre-1951)</th>
+                            <th>Impact on Men</th>
+                            <th>Impact on Women</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Naturalization</strong></td>
+                            <td>Protected if still of military age.</td>
+                            <td>Automatic loss (unless unmarried/divorced).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Foreign Military Service</strong></td>
+                            <td>Automatic loss (unless Allied forces).</td>
+                            <td>N/A (generally no military duty).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Public Office</strong></td>
+                            <td>Automatic loss (includes teachers, postal workers).</td>
+                            <td>Automatic loss if applicable.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marriage</strong></td>
+                            <td>N/A</td>
+                            <td>Loss only if husband's nationality acquired by law.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Jewish Displacement and the 1968 Emigration Wave</h3>
+            <p>The Jewish experience in Poland is marked by several distinct waves of emigration, each with specific legal implications for citizenship. The Holocaust remains the primary catalyst for the destruction of records and the displacement of survivors. For those who survived and remained in Poland until the post-war period, subsequent events such as the 1956–1957 "Gomulka thaw" and the 1968 anti-Zionist campaign led to further departures.</p>
+            <p>The emigration of 1968 is particularly significant. Thousands of Polish Jews were forced to leave the country and were issued "one-way" travel documents stating that the holder "is not a Polish citizen". Modern Polish jurisprudence has largely invalidated these forced renunciations. The Polish Supreme Court has acknowledged that these individuals were effectively expelled, and their loss of citizenship was illegal. Consequently, many 1968 expellees and their descendants can apply for a "reconfirmation" of citizenship.</p>
+
+            <h3>Archival Research and Evidence Collection</h3>
+            <p>The burden of proof in confirmation proceedings lies entirely with the applicant. They must provide "substantive original documentation" to support their claim. While foreign birth and marriage certificates establish the biological link between generations, "Polish evidence" is what establishes the legal link to the state.</p>
+
+            <div class="table-wrapper">
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Archive / Source</th>
+                            <th>Location</th>
+                            <th>Type of Records Provided</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>State Archives (Archiwa Państwowe)</strong></td>
+                            <td>Multiple Polish Cities</td>
+                            <td>Census records, voter lists, permanent population registers.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Civil Registry Offices (USC)</strong></td>
+                            <td>Municipalities</td>
+                            <td>Birth, marriage, and death certificates (post-1800s).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jewish Historical Institute (ŻIH)</strong></td>
+                            <td>Warsaw</td>
+                            <td>Ghetto records, community lists, testimonies.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arolsen Archives</strong></td>
+                            <td>Online / Germany</td>
+                            <td>Concentration camp records, Displaced Persons (DP) files.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Joint Distribution Committee (JDC)</strong></td>
+                            <td>Online / Warsaw</td>
+                            <td>Aid recipient lists, emigrant lists (1939-1941).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Central Military Archive (CAW)</strong></td>
+                            <td>Warsaw</td>
+                            <td>Military service records, conscription lists.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Documentation Standards: Authentication and Transcription</h3>
+            <p>All foreign documents submitted to the Polish authorities must meet rigorous standards of authenticity and linguistic accuracy. Documents issued outside of Poland generally require an Apostille or legalization by a Polish consul. Furthermore, every document not in Polish must be translated by a "sworn translator" (tłumacz przysięgły) registered with the Polish Ministry of Justice.</p>
+            <p>A vital step is the transcription (umiejscowienie) of foreign vital records into the Polish civil registry. This process triggers the generation of a PESEL number, the mandatory national identification number in Poland. The sequence is essential for ensuring data consistency across all official documents:</p>
+
+            <div class="process-flow">
+                <div class="process-step">1. Transcription</div>
+                <div class="process-arrow">&#10230;</div>
+                <div class="process-step">2. Polish Vital Record</div>
+                <div class="process-arrow">&#10230;</div>
+                <div class="process-step">3. PESEL Assignment</div>
+                <div class="process-arrow">&#10230;</div>
+                <div class="process-step">4. Passport Application</div>
+            </div>
+
+            <h3>Temporal and Financial Expectations</h3>
+            <p>Applicants should be prepared for a comprehensive timeline ranging from 12 to 24 months from the initial document search to the collection of the passport. The duration is influenced by the complexity of the ancestral history and the volume of archival research required.</p>
+
+            <div class="table-wrapper">
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Process Phase</th>
+                            <th>Estimated Timeline</th>
+                            <th>Typical Government/Filing Costs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Eligibility Assessment</strong></td>
+                            <td>1–2 Weeks</td>
+                            <td>Often free or low-cost initial review.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Document Gathering & Translation</strong></td>
+                            <td>2–6 Months</td>
+                            <td>Variable; sworn translation fees per page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Administrative Proceeding (Voivode)</strong></td>
+                            <td>6–18 Months</td>
+                            <td>58 PLN (Stamp duty for the decision).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transcription of Vital Records</strong></td>
+                            <td>1–2 Months</td>
+                            <td>50 PLN per certificate.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Passport Issuance (Consulate)</strong></td>
+                            <td>6–8 Weeks</td>
+                            <td>~118 USD (Varies by local consulate).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <strong>Our Commitment to Digital Integrity & Transparency:</strong> <br><br>
+                For legal practitioners and genealogy experts serving the Jewish diaspora, a sophisticated and secure digital presence is essential. We maintain strict "Core Web Vitals" optimization, ensuring sub-2 second load times, secure Formspree intake channels for data protection, and adherence to modern E-E-A-T standards. Your privacy, security, and heritage are treated with the highest level of professional discretion.
+            </div>
+
+            <h3>Conclusion: Reclaiming the Polish Heritage</h3>
+            <p>The journey toward Polish citizenship confirmation is a profound undertaking for the Jewish diaspora, merging legal necessity with historical discovery. By navigating the complexities of the 1920 and 1951 Acts, descendants can restore a legal status that was often lost "silently" or through the pressures of historical trauma.</p>
+            <p>Through rigorous archival research, meticulous document preparation, and a professionally optimized digital gateway, the path to citizenship is not just a legal procedure but a reclamation of one’s place in the broader narrative of Polish and European history.</p>
+
+        </div>
+    </article>
 
     <section class="contact-section">
-        <h2>How can I help you?</h2>
-        <p>Submit your case below to explore your eligibility for a European passport.</p>
+        <h2>Ready for VIP Service?</h2>
+        <p>Let's fast-track your citizenship application with expert precision.</p>
         
         <div class="contact-container">
             <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
@@ -241,12 +510,11 @@
                 
                 <div class="input-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell me briefly about your Polish ancestry or citizenship goals..." required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your case and how I can assist you..." required></textarea>
                 </div>
                 
-                <button type="submit" class="btn submit-btn">Send Message</button>
+                <button type="submit" class="btn submit-btn">Request VIP Processing</button>
             </form>
-
             <div id="form-status">Thank you! Your message has been sent to Polish Heritage successfully. I will be in touch shortly.</div>
             
         </div>
@@ -284,7 +552,7 @@
             }).then(response => {
                 if (response.ok) {
                     statusMessage.style.display = "block";
-                    form.reset(); 
+                    form.reset();
                     
                     setTimeout(function() {
                         statusMessage.style.display = "none";
@@ -303,6 +571,5 @@
         }
         form.addEventListener("submit", handleSubmit);
     </script>
-
 </body>
 </html>
