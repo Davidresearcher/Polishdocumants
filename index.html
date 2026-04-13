@@ -74,8 +74,9 @@
         .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; z-index: 2001; }
         .hamburger span { width: 30px; height: 3px; background-color: var(--gold); border-radius: 2px; transition: var(--transition-smooth); }
 
-        nav ul { display: flex; list-style: none; gap: 1.5rem; }
-        nav ul li a { text-decoration: none; color: var(--text-light); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition-smooth); }
+        nav ul { display: flex; list-style: none; gap: 1.8rem; }
+        /* RESTORED FONT SIZE AND SPACING */
+        nav ul li a { text-decoration: none; color: var(--text-light); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.5px; transition: var(--transition-smooth); font-weight: 600; white-space: nowrap; }
         nav ul li a:hover { color: var(--gold); }
 
         /* Hero */
@@ -103,19 +104,25 @@
         .service-card h3 { color: var(--gold); font-size: 1.6rem; margin-bottom: 1.5rem; min-height: 4rem; }
         .service-card p { color: var(--text-muted); margin-bottom: 2.5rem; flex-grow: 1; font-size: 1.05rem; }
 
-        .btn { display: inline-block; padding: 1rem 2.2rem; background: transparent; color: var(--gold); border: 1px solid var(--gold); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 600; border-radius: 4px; transition: var(--transition-smooth); cursor: pointer; }
+        .btn { display: inline-block; padding: 1rem 2.2rem; background: transparent; color: var(--gold); border: 1px solid var(--gold); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 600; border-radius: 4px; transition: var(--transition-smooth); cursor: pointer; align-self: flex-start; }
         .btn:hover { background: rgba(197, 160, 89, 0.15); color: var(--gold-hover); border-color: var(--gold-hover); transform: scale(1.02); }
-        .hero .btn { background: var(--gold); color: var(--navy); border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .hero .btn { background: var(--gold); color: var(--navy); border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.3); align-self: center; }
 
         /* Testimonials */
         .testimonial-section { padding: 120px 10%; background: linear-gradient(rgba(10, 25, 47, 0.88), rgba(10, 25, 47, 0.92)), url('https://images.unsplash.com/photo-1589133036854-3e9a4f48483a?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; background-attachment: fixed; text-align: center; }
         .testimonial-box { max-width: 900px; margin: 0 auto; font-style: italic; font-size: 1.5rem; line-height: 1.9; color: var(--text-light); position: relative; }
+        .testimonial-box::before { content: '"'; position: absolute; top: -40px; left: 50%; transform: translateX(-50%); font-size: 5rem; color: rgba(197, 160, 89, 0.3); font-family: serif; }
         .testimonial-author { margin-top: 3rem; font-style: normal; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 1rem; }
 
         /* Story */
         .story-section { padding: 120px 10%; background-color: var(--sepia-dark); }
         .story-content { max-width: 850px; margin: 0 auto; text-align: center; }
         .story-content p { margin-bottom: 2rem; font-size: 1.15rem; color: var(--text-muted); text-align: left; }
+
+        /* CTA */
+        .cta-section { padding: 100px 10%; background: var(--navy-light); text-align: center; border-top: 1px solid rgba(197, 160, 89, 0.15); border-bottom: 1px solid rgba(197, 160, 89, 0.15); }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--gold); }
+        .cta-section p { max-width: 800px; margin: 0 auto 3rem; color: var(--text-muted); font-size: 1.2rem; }
 
         /* Footer */
         footer { padding: 80px 10% 40px; background-color: var(--navy); text-align: center; border-top: 1px solid rgba(197, 160, 89, 0.1); }
@@ -124,14 +131,23 @@
         .footer-contact a:hover { color: var(--gold-hover); text-decoration: underline; }
         .copyright { margin-top: 3rem; font-size: 0.8rem; color: rgba(136, 146, 176, 0.5); border-top: 1px solid rgba(197, 160, 89, 0.05); padding-top: 2rem; }
 
+        @media (max-width: 1024px) {
+            nav ul { gap: 1rem; }
+            nav ul li a { font-size: 0.8rem; }
+        }
+
         @media (max-width: 768px) {
             .hamburger { display: flex; }
-            nav { position: absolute; top: 100%; left: 0; width: 100%; background: var(--navy); transform: translateY(-150%); opacity: 0; visibility: hidden; transition: var(--transition-smooth); }
+            nav { position: absolute; top: 100%; left: 0; width: 100%; background: var(--navy); border-top: 1px solid rgba(197, 160, 89, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: translateY(-150%); opacity: 0; visibility: hidden; transition: var(--transition-smooth); z-index: 1999; }
             nav.active { transform: translateY(0); opacity: 1; visibility: visible; }
             nav ul { flex-direction: column; align-items: center; padding: 2rem 0; gap: 2rem; }
             .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
             .hamburger.active span:nth-child(2) { opacity: 0; }
             .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+            
+            .hero h1 { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .testimonial-box { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -144,9 +160,9 @@
         <nav id="nav-menu">
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="how-we-work.html">How We Work</a></li>
                 <li><a href="#services">Our Services</a></li>
-                <li><a href="Retrieve-Archives-Poland.html">Retrieval</a></li>
-                <li><a href="citizenship.html">Polish Laws</a></li>
+                <li><a href="citizenship.html">Polish Citizenship Laws</a></li>
                 <li><a href="about-me.html">Contact</a></li>
             </ul>
         </nav>
@@ -159,32 +175,57 @@
 
     <section id="services" class="services-section">
         <h2 class="section-title">SERVICES <span>Polish Citizenship – Document Retrieval – Jewish Genealogy</span></h2>
+        
         <div class="services-grid">
+            
             <div class="service-card">
                 <h3>Citizenship Verification</h3>
-                <p>Are you a Polish citizen by descent? I possess specialized experience helping the diaspora legally confirm their status. We meticulously analyze history against the 1920 and 1951 laws to bypass bureaucratic delays.</p>
+                <p>Are you a Polish citizen by descent? I possess years of specialized experience helping the global diaspora legally confirm their status with Polish authorities. By meticulously analyzing your family history against the 1920 and 1951 nationality laws, we will bypass bureaucratic delays and secure your European passport together.</p>
                 <a href="verification.html" class="btn">Read More</a>
             </div>
+
             <div class="service-card">
                 <h3>Genealogy for Ancestry Proof</h3>
-                <p>I assist clients who may have limited knowledge about their ancestry. I specialize in proving citizenship in challenging cases where others have given up, bridging gaps with forensic precision.</p>
+                <p>I am Abraham Neumann, a professional Polish Jewish genealogist with a background in law, residing both in Poland and in Israel. Specializing in Polish Jewish Genealogy, I assist clients who may have limited knowledge about their Polish ancestry. I specialize in proving citizenship in challenging cases where others have given up.</p>
                 <a href="genealogy.html" class="btn">Read More</a>
             </div>
+            
+            <div class="service-card">
+                <h3>How to Prove Jewish Ancestry</h3>
+                <p>Did your Jewish ancestors lose or renounce their Polish citizenship upon emigrating? I specialize in locating the exact archival documents necessary to prove your Jewish ancestry, allowing you to reclaim your European passport through Simplified Naturalization.</p>
+                <a href="prove-jewish-ancestry.html" class="btn">Read More</a>
+            </div>
+
             <div class="service-card">
                 <h3>Polish Document Retrieval</h3>
-                <p>Retrieve documents from Polish archives fast and conveniently. I physically locate and retrieve historical, genealogical, and legal records directly from local offices and state archives.</p>
+                <p>Do you just want to retrieve documents from the Polish archives fast and conveniently? I physically locate and retrieve historical, genealogical, and legal records directly from local Polish registry offices (USC) and state archives.</p>
                 <a href="Retrieve-Archives-Poland.html" class="btn">Read More</a>
             </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Need Advice?</h2>
+        <p>Do you have Polish ancestry? Are you interested in having a European passport? Do you need help finding proof of your ancestry, or retrieving documents from Poland?</p>
+        <a href="about-me.html" class="btn" style="align-self: center;">Contact Me</a>
+    </section>
+
+    <section class="testimonial-section">
+        <h2 class="section-title" style="color: white; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px;">Testimonials</h2>
+        <div class="testimonial-box">
+            "Abraham is a brilliant, dedicated genealogist! He did tremendously deep dives into antiquated texts to find out about my ancestry. He has access to resources which I can’t access, and speaks many languages I don’t – both of which make him successful. I highly recommend him!"
+            <div class="testimonial-author">- Jack Domb, Attorney</div>
         </div>
     </section>
 
     <section id="about" class="story-section">
         <h2 class="section-title">My Story</h2>
         <div class="story-content">
-            <p>I am a Polish Jewish genealogist living in Israel. Since 2023, I have been performing heir and probate research, finding vital records for citizenship purposes, and creating family trees for individuals with Polish ancestry.</p>
-            <p>As a polyglot speaking Polish, English, Yiddish, and Hebrew, I navigate through historical documents and legal texts that are inaccessible to most researchers.</p>
+            <p>I am a Polish Jewish genealogist living in Israel. Since 2023 I have been doing heir and probate research, finding vital records for citizenship purposes and making family trees for individuals with Polish and Polish Jewish ancestry.</p>
+            <p>I am a polyglot speaking several languages. I speak fluent Polish, English, Yiddish, and Hebrew, and a little bit of Russian, a skill which helps me navigate through historical documents and legal texts.</p>
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="about-me.html" class="btn">Learn More</a>
+                <a href="about-me.html" class="btn" style="align-self: center;">Read More</a>
             </div>
         </div>
     </section>
