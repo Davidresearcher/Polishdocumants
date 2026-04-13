@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N7LXB4ZV');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP Citizenship Verification | Polish Heritage</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ALL PREMIUM STYLES EMBEDDED DIRECTLY */
+        /* institutional Brand Consistency */
         :root {
             --primary-navy: #0A192F; 
             --accent-gold: #D4AF37; 
@@ -36,29 +34,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: var(--light-bg);
         }
 
-        h1, h2, h3, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
+        h1, h2, h3, h4, .logo { font-family: 'Cinzel', serif; font-weight: 700; }
         a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 
-        /* FIXED HEADER & NAVIGATION (Prevents Overlap) */
         header {
             background-color: var(--primary-navy);
-            padding: 20px 4%; /* Reduced padding to create horizontal space */
+            padding: 20px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
-        .logo { color: var(--accent-gold); font-size: 22px; letter-spacing: 1.5px; white-space: nowrap; } /* Slightly smaller, prevents wrapping */
+        .logo { color: var(--accent-gold); font-size: 22px; letter-spacing: 1.5px; white-space: nowrap; }
         
-        nav ul { list-style: none; display: flex; gap: 20px; margin-left: 20px; } /* Reduced gap */
-        nav ul li a { color: var(--white); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; white-space: nowrap; } /* Prevents menu words from breaking */
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav ul li a { color: var(--white); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
         nav ul li a:hover { color: var(--accent-gold); }
 
-        /* PAGE HEADER */
         .page-header {
             background: linear-gradient(135deg, var(--primary-navy) 0%, #112240 100%);
             color: var(--white);
@@ -66,10 +62,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 100px 20px;
             border-bottom: 5px solid var(--accent-gold);
         }
-        .page-header h1 { font-size: 46px; margin-bottom: 15px; color: var(--accent-gold); }
-        .page-header p { font-size: 20px; max-width: 800px; margin: 0 auto; font-weight: 300; }
+        .page-header h1 { font-size: 42px; margin-bottom: 15px; color: var(--accent-gold); }
+        .page-header p { font-size: 18px; max-width: 800px; margin: 0 auto; font-weight: 300; }
 
-        /* CONTENT SECTION */
         .content-section { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
         .content-block {
             background: var(--white);
@@ -78,78 +73,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             box-shadow: 0 10px 40px rgba(0,0,0,0.05);
             margin-bottom: 40px;
             border-left: 5px solid var(--accent-gold);
-            transition: transform 0.3s ease;
         }
-        .content-block:hover { transform: translateY(-5px); }
         .content-block h2 { color: var(--primary-navy); margin-bottom: 25px; font-size: 28px; }
         .content-block p { margin-bottom: 20px; font-size: 16px; color: var(--text-muted); }
-        .content-block ul { margin-left: 25px; margin-bottom: 25px; color: var(--text-muted); }
-        .content-block ul li { margin-bottom: 10px; }
-        .content-block ul li strong { color: var(--primary-navy); }
         
         .highlight-box { background-color: #F8FAFC; padding: 25px; border-radius: 8px; border: 1px solid #E2E8F0; margin: 30px 0; border-left: 5px solid var(--primary-navy); }
 
-        /* CONTACT FORM SECTION */
+        .eligibility-container { background: var(--primary-navy); color: var(--white); padding: 50px; border-radius: 12px; border-top: 5px solid var(--accent-gold); text-align: center; margin-bottom: 70px; }
+        .roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+        .roadmap-card { background: var(--white); padding: 35px 25px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
+        .roadmap-number { font-family: 'Cinzel', serif; font-size: 90px; color: rgba(212, 175, 55, 0.08); position: absolute; top: -15px; right: 10px; font-weight: 700; line-height: 1; }
+
         .contact-section { padding: 80px 5% 120px 5%; background-color: var(--primary-navy); color: var(--white); text-align: center; border-top: 5px solid var(--accent-gold); }
-        .contact-section h2 { color: var(--accent-gold); font-size: 32px; margin-bottom: 10px; }
-        .contact-section > p { margin-bottom: 40px; font-size: 16px; color: var(--text-light); }
-        
-        .contact-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--white);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            position: relative;
-        }
+        .contact-container { max-width: 700px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); position: relative; }
         .contact-form { display: flex; flex-direction: column; gap: 25px; }
         .input-group { display: flex; flex-direction: column; text-align: left; }
-        .input-group label { font-size: 13px; color: var(--primary-navy); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-        .input-group input, .input-group textarea {
-            padding: 16px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-size: 15px; outline: none; background-color: #F8FAFC; color: var(--text-dark);
-        }
-        .input-group input:focus, .input-group textarea:focus { border-color: var(--accent-gold); background-color: var(--white); }
+        .input-group label { font-size: 13px; color: var(--primary-navy); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; }
+        .input-group input, .input-group textarea { padding: 16px; border: 1px solid #E2E8F0; border-radius: 6px; font-family: 'Montserrat', sans-serif; outline: none; background-color: #F8FAFC; color: var(--text-dark); }
         
-        .btn {
-            display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease;
-        }
+        .btn { display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 15px 40px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; border: none; cursor: pointer; transition: all 0.3s ease; }
         .btn:hover { background-color: #F3C94F; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
-        .submit-btn { width: 100%; margin-top: 10px; padding: 18px; font-size: 16px; }
 
-        /* SUCCESS POPUP STYLING */
-        #form-status {
-            display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center; font-weight: 600; font-size: 15px;
-        }
+        #form-status { display: none; margin-top: 20px; padding: 15px; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 8px; font-weight: 600; }
 
-        /* FOOTER */
         footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; font-size: 14px; }
         .footer-nav { margin-bottom: 30px; }
         .footer-nav a { margin: 0 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
         .footer-nav a:hover { color: var(--accent-gold); }
         .footer-contact p { margin: 10px 0; }
-        .footer-contact span { color: var(--accent-gold); font-weight: 600; }
+        .footer-contact a { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
 
-        /* RESPONSIVE */
-        @media(max-width: 900px) {
-            header { flex-direction: column; padding: 20px; }
-            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        }
-        @media(max-width: 768px) {
-            .content-block, .contact-container { padding: 30px 20px; }
-        }
+        @media(max-width: 768px) { header { flex-direction: column; padding: 20px; } nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; } .content-block, .contact-container { padding: 30px 20px; } }
     </style>
 </head>
 <body>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7LXB4ZV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <div class="logo">Polish Heritage</div>
         <nav>
             <ul>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="how-we-work.html">How We Work</a></li>
-                <li><a href="index.html#services">Our Services</a></li>
-                <li><a href="citizenship.html">Polish Citizenship Laws</a></li>
+                <li><a href="citizenship.html">Citizenship</a></li>
+                <li><a href="Retrieve-Archives-Poland.html">Retrieval</a></li>
+                <li><a href="index.html#services">Services</a></li>
                 <li><a href="about-me.html">Contact</a></li>
             </ul>
         </nav>
@@ -162,80 +129,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <section class="content-section">
         
-        <div class="content-block" id="about">
+        <div class="content-block">
             <h2>Speed Through Flawless Precision</h2>
-            <p>Locating your ancestors' documents is only the first half of the battle. The second half is the official administrative proceeding known as the <strong>Confirmation of Polish Citizenship</strong>. This formal application is adjudicated by the Polish Provincial Governor (Voivodeship) and demands an uncompromising adherence to civil code.</p>
-            <p>In Poland, bureaucracy moves exactly as fast as your paperwork allows. If a dossier is submitted with a missing international Apostille, an uncertified translation, or a formatting error, the government will issue a formal request for evidence, effectively freezing your case for 6 to 12 months.</p>
-            <p>My VIP Verification service is engineered to eliminate these delays entirely. I perform a rigorous pre-filing audit to ensure your legal dossier is 100% flawless before it ever reaches a government desk.</p>
+            <p>Confirmation of Polish Citizenship demands an uncompromising adherence to civil code. In Poland, bureaucracy moves exactly as fast as your paperwork allows.</p>
+            <p>My VIP Verification service performs a rigorous pre-filing audit to ensure your legal dossier is 100% flawless before it ever reaches a government desk.</p>
         </div>
 
-        <div class="content-block" id="services">
-            <h2>All-Inclusive Premium Representation</h2>
-            <p>Applying for citizenship from abroad often forces applicants to navigate confusing consulate appointments, international courier risks, and complex language barriers. I act as your official legal proxy (Pełnomocnik) directly on the ground in Poland.</p>
-            
-            <div class="highlight-box">
-                <p><strong>By retaining my VIP services, you secure:</strong></p>
-                <ul>
-                    <li><strong>Direct Warsaw Filing:</strong> I bypass the heavily backlogged embassy system and file your application directly with the government authorities in Poland.</li>
-                    <li><strong>In-House Sworn Translations:</strong> The Polish government strictly requires foreign vital records to be translated by a state-registered Polish Sworn Translator. I manage all required translations seamlessly within my agency.</li>
-                    <li><strong>Complete Case Management:</strong> All official government correspondence is legally routed to my office. If the authorities have a legislative inquiry, I submit the legal response on your behalf.</li>
+        <div class="eligibility-container">
+            <h2 style="color: var(--accent-gold); font-size: 32px; margin-bottom: 15px;">The 3-Point Eligibility Test</h2>
+            <p style="margin-bottom: 30px; color: var(--text-light);">You are highly likely to qualify if you can answer "Yes" to these criteria:</p>
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 175, 55, 0.2); padding: 30px; border-radius: 8px; max-width: 550px; margin: 0 auto; text-align: left;">
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;"><span style="color: var(--accent-gold); font-size: 22px;">☑</span> <span>Ancestor was born in Poland or held citizenship.</span></li>
+                    <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;"><span style="color: var(--accent-gold); font-size: 22px;">☑</span> <span>Ancestor emigrated after January 20, 1920.</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 15px;"><span style="color: var(--accent-gold); font-size: 22px;">☑</span> <span>Ancestor did not serve in foreign military (e.g., IDF) prior to 1951.</span></li>
                 </ul>
             </div>
         </div>
 
-        <div class="content-block" style="background: transparent; box-shadow: none; border: none; padding: 20px 0 40px 0;">
-            
-            <div style="background: var(--primary-navy); color: var(--white); padding: 50px; border-radius: 12px; border-top: 5px solid var(--accent-gold); box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 70px; text-align: center;">
-                <h2 style="color: var(--accent-gold); font-size: 32px; margin-bottom: 15px;">The 3-Point Eligibility Test</h2>
-                <p style="font-size: 16px; color: var(--text-light); max-width: 650px; margin: 0 auto 30px auto; line-height: 1.8;">Before we execute the archival process, we must establish a foundational legal baseline. You are highly likely to qualify for our VIP Fast-Track if you can answer "Yes" to these three criteria:</p>
-                
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(212, 175, 55, 0.2); padding: 30px; border-radius: 8px; max-width: 550px; margin: 0 auto; text-align: left;">
-                    <ul style="list-style: none; font-size: 16px; margin: 0; padding: 0;">
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
-                            <span style="color: var(--accent-gold); font-size: 22px; line-height: 1;">☑</span> 
-                            <span style="color: #E2E8F0;">Your ancestor was <strong style="color: #FFFFFF;">born in Poland</strong> or held Polish citizenship.</span>
-                        </li>
-                        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 15px;">
-                            <span style="color: var(--accent-gold); font-size: 22px; line-height: 1;">☑</span> 
-                            <span style="color: #E2E8F0;">Your ancestor emigrated <strong style="color: #FFFFFF;">after January 20, 1920</strong>.</span>
-                        </li>
-                        <li style="display: flex; align-items: flex-start; gap: 15px;">
-                            <span style="color: var(--accent-gold); font-size: 22px; line-height: 1;">☑</span> 
-                            <span style="color: #E2E8F0;">Your ancestor <strong style="color: #FFFFFF;">did not serve</strong> in a foreign military (e.g., IDF) prior to 1951.</span>
-                        </li>
-                    </ul>
-                </div>
-                <p style="margin-top: 30px; font-size: 14px; font-style: italic; color: var(--accent-gold); font-weight: 600; letter-spacing: 1px;">DID YOU CHECK ALL THREE BOXES? KEEP READING TO SEE HOW WE SECURE YOUR PASSPORT.</p>
+        <div class="roadmap-grid">
+            <div class="roadmap-card">
+                <div class="roadmap-number">1</div>
+                <h3>Archival Discovery</h3>
+                <p>Interfacing directly with Polish State Archives to extract definitive legal proof.</p>
             </div>
-
-            <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-navy); font-size: 32px;">The VIP Verification Roadmap</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
-                
-                <div style="background: var(--white); padding: 35px 25px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; overflow: hidden; transition: transform 0.3s ease;">
-                    <div style="font-family: 'Cinzel', serif; font-size: 90px; color: rgba(212, 175, 55, 0.08); position: absolute; top: -15px; right: 10px; font-weight: 700; line-height: 1;">1</div>
-                    <h3 style="font-size: 16px; color: var(--primary-navy); margin-bottom: 15px; position: relative; z-index: 2; text-transform: uppercase; letter-spacing: 1px;">Archival Discovery</h3>
-                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; position: relative; z-index: 2;">We bypass genealogy hobby sites and interface directly with Polish State Archives and municipal registries to extract the definitive legal proof of your ancestor's citizenship.</p>
-                </div>
-
-                <div style="background: var(--white); padding: 35px 25px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; overflow: hidden; transition: transform 0.3s ease;">
-                    <div style="font-family: 'Cinzel', serif; font-size: 90px; color: rgba(212, 175, 55, 0.08); position: absolute; top: -15px; right: 10px; font-weight: 700; line-height: 1;">2</div>
-                    <h3 style="font-size: 16px; color: var(--primary-navy); margin-bottom: 15px; position: relative; z-index: 2; text-transform: uppercase; letter-spacing: 1px;">Dossier Assembly</h3>
-                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; position: relative; z-index: 2;">Our in-house sworn translators convert your foreign vital records into Polish. We then structure your entire application to meet the exacting standards of Polish civil law.</p>
-                </div>
-
-                <div style="background: var(--white); padding: 35px 25px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; overflow: hidden; transition: transform 0.3s ease;">
-                    <div style="font-family: 'Cinzel', serif; font-size: 90px; color: rgba(212, 175, 55, 0.08); position: absolute; top: -15px; right: 10px; font-weight: 700; line-height: 1;">3</div>
-                    <h3 style="font-size: 16px; color: var(--primary-navy); margin-bottom: 15px; position: relative; z-index: 2; text-transform: uppercase; letter-spacing: 1px;">Direct Adjudication</h3>
-                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; position: relative; z-index: 2;">Acting as your legal proxy, we bypass backlogged embassies and file your case directly with the Provincial Governor in Poland, handling all correspondence on your behalf.</p>
-                </div>
-
-                <div style="background: var(--white); padding: 35px 25px; border-radius: 8px; border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; overflow: hidden; transition: transform 0.3s ease;">
-                    <div style="font-family: 'Cinzel', serif; font-size: 90px; color: rgba(212, 175, 55, 0.08); position: absolute; top: -15px; right: 10px; font-weight: 700; line-height: 1;">4</div>
-                    <h3 style="font-size: 16px; color: var(--primary-navy); margin-bottom: 15px; position: relative; z-index: 2; text-transform: uppercase; letter-spacing: 1px;">Passport Issuance</h3>
-                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.7; position: relative; z-index: 2;">Upon successful confirmation and the transcription of your vital records, you are issued a PESEL number, unlocking your right to claim your European passport.</p>
-                </div>
-
+            <div class="roadmap-card">
+                <div class="roadmap-number">2</div>
+                <h3>Dossier Assembly</h3>
+                <p>In-house sworn translations and structuring to meet exacting civil law standards.</p>
+            </div>
+            <div class="roadmap-card">
+                <div class="roadmap-number">3</div>
+                <h3>Direct Adjudication</h3>
+                <p>Filing directly with the Provincial Governor in Poland as your legal proxy.</p>
+            </div>
+            <div class="roadmap-card">
+                <div class="roadmap-number">4</div>
+                <h3>Passport Issuance</h3>
+                <p>Unlock your right to a European passport once PESEL numbers are issued.</p>
             </div>
         </div>
         
@@ -243,43 +174,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <section class="contact-section">
         <h2>Ready for VIP Service?</h2>
-        <p>Let's fast-track your citizenship application with expert precision.</p>
-        
         <div class="contact-container">
             <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
-                
-                <div class="input-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your case and how I can assist you..." required></textarea>
-                </div>
-                
-                <button type="submit" class="btn submit-btn">Request VIP Processing</button>
+                <div class="input-group"><label>Full Name</label><input type="text" name="name" required></div>
+                <div class="input-group"><label>Email Address</label><input type="email" name="email" required></div>
+                <div class="input-group"><label>Message</label><textarea name="message" rows="5" required></textarea></div>
+                <button type="submit" class="btn">Request VIP Processing</button>
             </form>
-            <div id="form-status">Thank you! Your message has been sent to Polish Heritage successfully. I will be in touch shortly.</div>
-            
+            <div id="form-status">Thank you! Your message has been sent successfully.</div>
         </div>
     </section>
 
     <footer>
         <div class="footer-nav">
             <a href="index.html#about">About</a>
-            <a href="citizenship.html">Polish Citizenship</a>
+            <a href="citizenship.html">Citizenship</a>
             <a href="index.html#services">Services</a>
             <a href="about-me.html">Contact</a>
         </div>
         <div class="footer-contact">
-            <p>USA: +1-845-587-0531 | ISRAEL: +972-(0)53-452-5303</p>
-            <p>Email: infopolishcitizenship@gmail.com</p>
+            <p>USA: <a href="tel:+18455870531">+1-845-587-0531</a> | ISRAEL: <a href="tel:+972534525303">+972-(0)53-452-5303</a></p>
+            <p>Email: <a href="mailto:infopolishcitizenship@gmail.com">infopolishcitizenship@gmail.com</a></p>
             <br>
             <p>&copy; 2026 Polish Heritage | Abraham Neumann. All rights reserved.</p>
         </div>
@@ -292,31 +207,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         async function handleSubmit(event) {
             event.preventDefault(); 
             var data = new FormData(event.target);
-            
             fetch(event.target.action, {
                 method: form.method,
                 body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
                     statusMessage.style.display = "block";
-                    form.reset();
-                    
-                    setTimeout(function() {
-                        statusMessage.style.display = "none";
-                    }, 6000);
+                    form.reset(); 
+                    setTimeout(() => { statusMessage.style.display = "none"; }, 6000);
                 } else {
                     statusMessage.style.display = "block";
                     statusMessage.style.backgroundColor = "#fef2f2";
                     statusMessage.style.color = "#991b1b";
-                    statusMessage.style.border = "1px solid #fecaca";
-                    statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
+                    statusMessage.innerHTML = "Oops! Problem submitting form.";
                 }
-            }).catch(error => {
-                statusMessage.style.display = "block";
-                statusMessage.innerHTML = "Oops! There was a problem submitting your form.";
             });
         }
         form.addEventListener("submit", handleSubmit);
