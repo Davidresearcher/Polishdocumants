@@ -79,7 +79,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 5%; /* Reduced padding slightly to fit the new link */
+            padding: 1.2rem 4%; /* Adjusted padding */
             background: var(--glass);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -116,17 +116,17 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2.2rem; /* Slightly reduced gap to accommodate the extra menu item safely */
+            gap: 1.5rem; /* THE FIX: Reduced gap so the longer menu items fit */
         }
 
         nav ul li a {
             text-decoration: none;
             color: var(--text-light);
             font-weight: 400;
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* THE FIX: Slightly smaller font size to prevent squishing */
             transition: var(--transition-smooth);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px; /* THE FIX: Tighter tracking to save horizontal space */
         }
 
         nav ul li a:hover {
@@ -471,7 +471,7 @@
             
             <div class="service-card">
                 <h3>Citizenship Verification</h3>
-                <p>Are you a Polish citizen by descent? I have years worth of experience helping individuals confirm their citizenship status with Polish authorities. Let’s explore your heritage and verify your Polish citizenship together.</p>
+                <p>Are you a Polish citizen by descent? I possess years of specialized experience helping the global diaspora legally confirm their status with Polish authorities. By meticulously analyzing your family history against the 1920 and 1951 nationality laws, we will bypass bureaucratic delays and secure your European passport together.</p>
                 <a href="verification.html" class="btn">Read More</a>
             </div>
 
