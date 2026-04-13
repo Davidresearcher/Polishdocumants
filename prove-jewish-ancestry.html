@@ -11,6 +11,8 @@
     <title>Jewish Ancestry & Citizenship Proof | Polish Heritage</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" href="favicon.png">
+    <meta name="description" content="Expert Polish Jewish genealogy and record search services. We bridge the gaps in family history to secure your ancestral proof for citizenship.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -36,7 +38,7 @@
 
         header {
             background-color: var(--primary-navy);
-            padding: 25px 60px;
+            padding: 20px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -46,9 +48,9 @@
             z-index: 1000;
         }
 
-        .logo { color: var(--accent-gold); font-size: 26px; letter-spacing: 2px; }
-        nav ul { list-style: none; display: flex; gap: 35px; }
-        nav ul li a { color: var(--white); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+        .logo { color: var(--accent-gold); font-size: 22px; letter-spacing: 1.5px; white-space: nowrap; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav ul li a { color: var(--white); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; white-space: nowrap; }
         nav ul li a:hover { color: var(--accent-gold); }
 
         .page-header {
@@ -105,9 +107,106 @@
         #form-status { display: none; margin-top: 20px; padding: 15px; border-radius: 8px; text-align: center; font-weight: 600; }
 
         footer { background-color: #050D1A; color: var(--text-light); padding: 60px 5%; text-align: center; font-size: 14px; }
+        .footer-nav { margin-bottom: 30px; }
+        .footer-nav a { margin: 0 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .footer-nav a:hover { color: var(--accent-gold); }
         .footer-contact p { margin: 10px 0; }
         .footer-contact a { color: var(--accent-gold); font-weight: 600; }
 
-        @media(max-width: 768px) {
+        @media(max-width: 900px) {
             header { flex-direction: column; padding: 20px; }
-            nav ul { margin-top: 20px; flex-wrap: wrap; justify
+            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        }
+
+        @media(max-width: 768px) {
+            .page-header h1 { font-size: 32px; }
+            .content-block { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7LXB4ZV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header>
+        <div class="logo">Polish Heritage</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="how-we-work.html">How We Work</a></li>
+                <li><a href="index.html#services">Our Services</a></li>
+                <li><a href="citizenship.html">Polish Citizenship Laws</a></li>
+                <li><a href="about-me.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Proving Jewish Ancestry</h1>
+        <p>Expert Document Recovery for Polish Citizenship and Genealogical Discovery</p>
+    </div>
+
+    <section class="content-section">
+        
+        <div class="content-block">
+            <h2>The Challenge of Post-War Archives</h2>
+            <p>For many descendants of Polish Jews, the trail of family history often goes cold in 1939. The destruction of the Holocaust left a "documentary void." However, a common misconception is that all records were destroyed.</p>
+            <p>In reality, millions of documents survived. The challenge is not existence—it's <strong>bureaucratic complexity, language barriers, and the passage of time.</strong></p>
+        </div>
+
+        <div class="content-block">
+            <h2>Why Proof of Ancestry is the Key</h2>
+            <p>To acquire a Polish passport, you must <strong>confirm</strong> you already hold it by descent. This requires finding:</p>
+            <ul>
+                <li><strong>Army Records:</strong> Service in the <em>Wojsko Polskie</em> often confirms citizenship.</li>
+                <li><strong>Kahal Records:</strong> Jewish community registers that pre-date civil registries.</li>
+                <li><strong>Residential Lists:</strong> <em>Księgi Ludności</em> that prove town residency.</li>
+                <li><strong>Passport Files:</strong> Original 1920s applications with photos and signatures.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h2>Deciphering the "Lost" Languages</h2>
+            <p>Before 1918, Poland was partitioned. Records might be in <strong>Old Russian, Yiddish, German, or Latin.</strong></p>
+            <p>As a polyglot in Israel and Poland, I manually search these handwritten archives. Understanding how surnames changed upon emigration is the difference between success and rejection.</p>
+        </div>
+
+        <div class="highlight-box" style="text-align: center;">
+            <h3 style="margin-bottom: 0;">"I specialize in proving citizenship in challenging cases where others have given up."</h3>
+        </div>
+
+    </section>
+
+    <section class="contact-section">
+        <h2>Start Your Discovery</h2>
+        <p>I will personally review your details and evaluate your documentation for a Polish Passport.</p>
+        
+        <div class="contact-container">
+            <form id="my-form" action="https://formspree.io/f/xzdjvpdj" method="POST" class="contact-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Ancestry Details</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Names, birth years, or towns known..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Request Evaluation</button>
+            </form>
+            <div id="form-status"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html#about">About</a>
+            <a href="how-we-work.html">How We Work</a>
+            <a href="index.html#services">Our Services</a>
+            <a href="citizenship.html">Polish Citizenship Laws</a>
+            <a href="about-me.html">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <p>USA: <a href="tel:+18455870
